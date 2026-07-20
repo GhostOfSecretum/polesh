@@ -1,0 +1,115 @@
+/* ============================================================
+   Parallax variant for home — loaded only by index-parallax.html
+   Original index.html stays unchanged.
+   ============================================================ */
+
+.home-parallax .hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-parallax .hero__media {
+  overflow: hidden;
+}
+
+.home-parallax .hero__media img {
+  width: 100%;
+  height: 118%;
+  object-fit: cover;
+  object-position: center 22%;
+  will-change: transform;
+  transform: translate3d(0, 0, 0) scale(1.08);
+  animation: none; /* JS parallax replaces ken-burns */
+}
+
+.home-parallax .hero__copy {
+  position: relative;
+  z-index: 2;
+  will-change: transform, opacity;
+}
+
+.home-parallax .hero__media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(201, 184, 160, 0.18), transparent 55%),
+    linear-gradient(105deg, rgba(244, 240, 232, 0.08), transparent 50%);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.home-parallax .project-card__media {
+  overflow: hidden;
+}
+
+.home-parallax .project-card__media img {
+  width: 100%;
+  height: 115%;
+  object-fit: cover;
+  will-change: transform;
+  transform: translate3d(0, 0, 0) scale(1.06);
+  transition: none; /* parallax driven by JS */
+}
+
+.home-parallax .project-card:hover .project-card__media img {
+  /* keep hover scale via JS factor; no CSS fight */
+  transform: translate3d(0, var(--py, 0px), 0) scale(1.08);
+}
+
+.home-parallax .project-card__body {
+  will-change: transform;
+}
+
+.home-parallax .about {
+  overflow: hidden;
+  position: relative;
+}
+
+.home-parallax .about__text {
+  will-change: transform, opacity;
+}
+
+.home-parallax .section-head {
+  will-change: transform, opacity;
+}
+
+.version-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: rgba(243, 239, 232, 0.55);
+}
+
+.version-switch a {
+  color: #c9a77a;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.version-switch a:hover {
+  border-bottom-color: #c9a77a;
+  color: #f3efe8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-parallax .hero__media img,
+  .home-parallax .project-card__media img,
+  .home-parallax .hero__copy,
+  .home-parallax .project-card__body,
+  .home-parallax .about__text,
+  .home-parallax .section-head {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .home-parallax .hero__media img {
+    height: 112%;
+  }
+}

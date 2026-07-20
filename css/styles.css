@@ -566,7 +566,146 @@ body::before {
 
 .project-track {
   position: relative;
-  height: 320vh;
+  height: 260vh; /* video walkthrough, then stills below */
+}
+
+/* ------------------------------------------------------------
+   Project stills — photos after video walkthrough
+   ------------------------------------------------------------ */
+
+.project-stills {
+  position: relative;
+  z-index: 4;
+  background: var(--bg);
+  color: var(--ink);
+  padding: clamp(3.5rem, 9vh, 6rem) 0 clamp(2.5rem, 6vh, 4rem);
+  border-top: 1px solid var(--line);
+}
+
+.project-stills__head {
+  max-width: var(--max);
+  margin: 0 auto clamp(2rem, 5vh, 3.25rem);
+  padding: 0 clamp(1.25rem, 4vw, 3.5rem);
+  display: grid;
+  gap: 0.55rem;
+}
+
+.project-stills__label {
+  margin: 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.project-stills__sub {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 3vw, 2.25rem);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  max-width: 22rem;
+  color: var(--ink-soft);
+}
+
+.project-stills__grid {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3.5rem);
+  display: grid;
+  gap: clamp(1.25rem, 3vh, 2.25rem);
+}
+
+.still {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-deep);
+  opacity: 0;
+  transform: translateY(2rem);
+  transition:
+    opacity 0.9s var(--ease),
+    transform 0.9s var(--ease);
+}
+
+.still.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+.still__frame {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
+.still--tall .still__frame {
+  aspect-ratio: 4 / 5;
+}
+
+.still__frame img {
+  width: 100%;
+  height: 115%;
+  object-fit: cover;
+  will-change: transform;
+  transform: translate3d(0, 0, 0) scale(1.06);
+}
+
+/* Editorial rhythm: full / half / half */
+.still--wide {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 840px) {
+  .project-stills__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.25rem, 2.5vw, 2rem);
+  }
+
+  .still--wide {
+    grid-column: 1 / -1;
+  }
+
+  .still--wide .still__frame {
+    aspect-ratio: 21 / 9;
+  }
+
+  .still--offset {
+    margin-top: clamp(1.5rem, 4vh, 3rem);
+  }
+}
+
+/* End cap under video — same tone as site footer copy */
+.project-end {
+  position: relative;
+  z-index: 5;
+  background: var(--dark);
+  color: #f3efe8;
+  display: grid;
+  place-items: center;
+  padding: clamp(1.35rem, 3.5vh, 1.85rem) clamp(1.25rem, 4vw, 3.5rem);
+  border-top: 1px solid rgba(243, 239, 232, 0.12);
+}
+
+.project-end__frame {
+  width: min(28rem, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.35rem;
+  border: 1px solid rgba(243, 239, 232, 0.12);
+  background: transparent;
+}
+
+.project-end .footer__copy {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  max-width: none;
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(243, 239, 232, 0.45);
 }
 
 .project-stage-wrap {
@@ -676,22 +815,132 @@ body::before {
   pointer-events: none;
 }
 
-.project-hint {
-  position: absolute;
-  top: calc(var(--header-h) + 1.25rem);
-  left: clamp(1.25rem, 4vw, 3.5rem);
-  z-index: 3;
-  margin: 0;
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: rgba(243, 239, 232, 0.55);
-  animation: pulse 2.4s var(--ease-soft) infinite;
+/* Interactive scroll cue */
+.scroll-cue {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.5rem;
+  z-index: 4;
+  color: inherit;
+  transition:
+    opacity 0.55s var(--ease),
+    transform 0.55s var(--ease),
+    visibility 0.55s;
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.85; }
+.scroll-cue.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+
+.scroll-cue__mouse {
+  width: 1.35rem;
+  height: 2.15rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  position: relative;
+  opacity: 0.75;
+}
+
+.scroll-cue__wheel {
+  position: absolute;
+  left: 50%;
+  top: 0.4rem;
+  width: 2px;
+  height: 0.4rem;
+  margin-left: -1px;
+  border-radius: 2px;
+  background: currentColor;
+  animation: scroll-wheel 1.6s var(--ease-soft) infinite;
+}
+
+.scroll-cue__label {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.scroll-cue__chevron {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: rotate(45deg);
+  opacity: 0.65;
+  animation: scroll-chevron 1.6s var(--ease-soft) infinite;
+}
+
+.scroll-cue:hover .scroll-cue__label,
+.scroll-cue:focus-visible .scroll-cue__label {
+  opacity: 1;
+}
+
+.scroll-cue:hover .scroll-cue__mouse,
+.scroll-cue:focus-visible .scroll-cue__mouse {
+  opacity: 1;
+}
+
+.scroll-cue:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* Project page: bottom-center over video */
+.project-stage-wrap .scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(1.5rem, 4vh, 2.5rem);
+  transform: translateX(-50%);
+  color: rgba(243, 239, 232, 0.85);
+}
+
+.project-stage-wrap .scroll-cue.is-hidden {
+  transform: translateX(-50%) translateY(10px);
+}
+
+/* Home hero: bottom of hero section */
+.hero .scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 1.35rem;
+  transform: translateX(-50%);
+  color: var(--ink-soft);
+  z-index: 3;
+}
+
+.hero .scroll-cue.is-hidden {
+  transform: translateX(-50%) translateY(10px);
+}
+
+.hero {
+  position: relative;
+}
+
+@keyframes scroll-wheel {
+  0% { opacity: 0; transform: translateY(0); }
+  35% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(0.55rem); }
+}
+
+@keyframes scroll-chevron {
+  0%, 100% { opacity: 0.35; transform: rotate(45deg) translateY(0); }
+  50% { opacity: 0.9; transform: rotate(45deg) translateY(3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue__wheel,
+  .scroll-cue__chevron {
+    animation: none;
+  }
 }
 
 /* ------------------------------------------------------------

@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sergey Полищук — архитектор и дизайнер интерьеров. polesh.pro" />
-  <title>polesh — Sergey Полищук</title>
+  <meta name="description" content="Sergey Полищук — архитектор и дизайнер интерьеров. polesh.pro (parallax)" />
+  <title>polesh — Sergey Полищук (parallax)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/parallax-home.css" />
 </head>
-<body>
+<body class="home-parallax">
+  <!--
+    Parallax variant of the homepage.
+    Classic (no parallax): index.html
+  -->
   <header class="site-header" id="site-header">
-    <a class="logo" href="index.html" aria-label="polesh.pro">
+    <a class="logo" href="index-parallax.html" aria-label="polesh.pro">
       <span class="logo__word">polesh</span><span class="logo__tld">.pro</span>
     </a>
 
@@ -28,7 +33,6 @@
           <button type="button" data-lang-btn="en">EN</button>
         </div>
         <div class="control-group control-group--fonts" role="group" aria-label="Typeface">
-          <!-- Free fonts: SIL OFL / Apache 2.0 (Google Fonts) -->
           <button type="button" data-font-btn="classic" class="is-active" data-i18n="ui.font.classic">Классика</button>
           <button type="button" data-font-btn="modern" data-i18n="ui.font.modern">Модерн</button>
           <button type="button" data-font-btn="editorial" data-i18n="ui.font.editorial">Редакторский</button>
@@ -39,9 +43,8 @@
   </header>
 
   <main>
-    <!-- Hero: portrait + intro -->
-    <section class="hero" aria-labelledby="hero-name">
-      <div class="hero__copy">
+    <section class="hero" aria-labelledby="hero-name" data-parallax-hero>
+      <div class="hero__copy" data-parallax-hero-copy>
         <p class="hero__eyebrow reveal" style="--d:0s" data-i18n="hero.role">Архитектор · Дизайнер интерьеров</p>
         <h1 class="hero__name reveal" id="hero-name" style="--d:0.1s" data-i18n="hero.name">Sergey Полищук</h1>
         <p class="hero__bio reveal" style="--d:0.2s" data-i18n="hero.bio">
@@ -49,8 +52,7 @@
         </p>
         <a class="hero__cta reveal" style="--d:0.3s" href="#projects" data-i18n="hero.cta">Смотреть проекты</a>
       </div>
-      <div class="hero__media">
-        <!-- Hero photo -->
+      <div class="hero__media" data-parallax-hero-media>
         <img
           src="images/hero-car-16x9-b-4k.png"
           alt="Sergey Полищук"
@@ -73,19 +75,17 @@
       </button>
     </section>
 
-    <!-- Project previews — photos only -->
-    <div class="section-head" id="projects">
+    <div class="section-head" id="projects" data-parallax-section>
       <h2 data-i18n="projects.label">Избранные проекты</h2>
       <span>04</span>
     </div>
 
     <section class="projects">
-      <!-- 01 Lobby — preview: images/previews/lobby.jpg -->
       <article class="project-card" data-card-reveal>
-        <a class="project-card__media" href="projects/lobby.html" tabindex="-1" aria-hidden="true">
+        <a class="project-card__media" href="projects/lobby.html" tabindex="-1" aria-hidden="true" data-parallax-media>
           <img src="images/previews/lobby.jpg" alt="" loading="lazy" />
         </a>
-        <div class="project-card__body">
+        <div class="project-card__body" data-parallax-body>
           <p class="project-card__index">01</p>
           <p class="project-card__tag" data-i18n="project.lobby.tag">Общественное пространство</p>
           <h3 class="project-card__title">
@@ -98,12 +98,11 @@
         </div>
       </article>
 
-      <!-- 02 Ostrov — preview: images/previews/ostrov.jpg -->
       <article class="project-card" data-card-reveal>
-        <a class="project-card__media" href="projects/ostrov.html" tabindex="-1" aria-hidden="true">
+        <a class="project-card__media" href="projects/ostrov.html" tabindex="-1" aria-hidden="true" data-parallax-media>
           <img src="images/previews/ostrov.jpg" alt="" loading="lazy" />
         </a>
-        <div class="project-card__body">
+        <div class="project-card__body" data-parallax-body>
           <p class="project-card__index">02</p>
           <p class="project-card__tag" data-i18n="project.ostrov.tag">Гостевой номер</p>
           <h3 class="project-card__title">
@@ -116,12 +115,11 @@
         </div>
       </article>
 
-      <!-- 03 Sputnik — preview: images/previews/sputnik.jpg -->
       <article class="project-card" data-card-reveal>
-        <a class="project-card__media" href="projects/sputnik.html" tabindex="-1" aria-hidden="true">
+        <a class="project-card__media" href="projects/sputnik.html" tabindex="-1" aria-hidden="true" data-parallax-media>
           <img src="images/previews/sputnik.jpg" alt="" loading="lazy" />
         </a>
-        <div class="project-card__body">
+        <div class="project-card__body" data-parallax-body>
           <p class="project-card__index">03</p>
           <p class="project-card__tag" data-i18n="project.sputnik.tag">Гостевой номер</p>
           <h3 class="project-card__title">
@@ -134,12 +132,11 @@
         </div>
       </article>
 
-      <!-- 04 Eco — preview: images/previews/eco.jpg -->
       <article class="project-card" data-card-reveal>
-        <a class="project-card__media" href="projects/eco.html" tabindex="-1" aria-hidden="true">
+        <a class="project-card__media" href="projects/eco.html" tabindex="-1" aria-hidden="true" data-parallax-media>
           <img src="images/previews/eco.jpg" alt="" loading="lazy" />
         </a>
-        <div class="project-card__body">
+        <div class="project-card__body" data-parallax-body>
           <p class="project-card__index">04</p>
           <p class="project-card__tag" data-i18n="project.eco.tag">Гостевой номер</p>
           <h3 class="project-card__title">
@@ -155,7 +152,7 @@
 
     <section class="about" id="about">
       <p class="about__label" data-i18n="about.label">Подход</p>
-      <p class="about__text" data-i18n="about.text">
+      <p class="about__text" data-parallax-about data-i18n="about.text">
         Работаю на стыке архитектуры и интерьера: от планировочной логики до тактильного финиша.
       </p>
     </section>
@@ -168,10 +165,12 @@
           <span class="logo__word">polesh</span><span class="logo__tld">.pro</span>
         </span>
         <p class="footer__tagline" data-i18n="footer.tagline">Архитектура и дизайн интерьеров</p>
+        <p class="version-switch">
+          Parallax · <a href="index.html">Classic version</a>
+        </p>
       </div>
       <div class="footer__col">
         <h3 class="footer__label" data-i18n="footer.contacts">Контакты</h3>
-        <!-- TODO: real contacts -->
         <a href="mailto:hello@polesh.pro">hello@polesh.pro</a>
         <a href="tel:+70000000000">+7 (000) 000-00-00</a>
       </div>
@@ -188,6 +187,6 @@
   <script src="js/i18n.js"></script>
   <script src="js/shared.js"></script>
   <script src="js/scroll-cue.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/home-parallax.js"></script>
 </body>
 </html>

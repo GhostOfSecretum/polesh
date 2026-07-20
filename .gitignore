@@ -11,3 +11,4 @@ node_modules/
 .vscode/
 .idea/
 images/*.mp4
+images/_upload_eco/

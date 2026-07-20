@@ -32,10 +32,22 @@
     </div>
   </header>
 
-  <main class="project-track" data-project-track>
+  <main>
+  <div class="project-track" data-project-track>
     <!-- VIDEO: ../videos/fullpage-scroll-walkthrough.mp4 -->
     <div class="project-stage-wrap">
-      <p class="project-hint" data-i18n="project.scroll.hint">Листайте, чтобы пройтись по пространству</p>
+      <button
+        type="button"
+        class="scroll-cue"
+        data-scroll-cue
+        data-scroll-amount="900"
+        data-i18n-aria="scroll.cue.aria"
+        aria-label="Прокрутить вниз"
+      >
+        <span class="scroll-cue__mouse" aria-hidden="true"><span class="scroll-cue__wheel"></span></span>
+        <span class="scroll-cue__label" data-i18n="scroll.cue">Листайте вниз</span>
+        <span class="scroll-cue__chevron" aria-hidden="true"></span>
+      </button>
       <div class="project-stage" data-project-stage>
         <video data-bg-video muted playsinline loop preload="auto" autoplay>
           <source src="../videos/fullpage-scroll-walkthrough.mp4" type="video/mp4" />
@@ -68,10 +80,59 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Stills after video walkthrough -->
+  <section class="project-stills" data-project-stills aria-labelledby="stills-heading">
+    <div class="project-stills__head">
+      <p class="project-stills__label" id="stills-heading" data-i18n="project.stills.label">Кадры проекта</p>
+      <p class="project-stills__sub" data-i18n="project.stills.sub">Статичные виды пространства после прохода</p>
+    </div>
+    <div class="project-stills__grid">
+      <figure class="still still--wide" data-still>
+        <div class="still__frame" data-still-media>
+          <img src="../images/gallery/ostrov/01.jpg" alt="" loading="lazy" />
+        </div>
+      </figure>
+      <figure class="still still--tall" data-still>
+        <div class="still__frame" data-still-media>
+          <img src="../images/gallery/ostrov/02.jpg" alt="" loading="lazy" />
+        </div>
+      </figure>
+      <figure class="still still--tall still--offset" data-still>
+        <div class="still__frame" data-still-media>
+          <img src="../images/gallery/ostrov/03.jpg" alt="" loading="lazy" />
+        </div>
+      </figure>
+      <figure class="still still--wide" data-still>
+        <div class="still__frame" data-still-media>
+          <img src="../images/gallery/ostrov/04.jpg" alt="" loading="lazy" />
+        </div>
+      </figure>
+      <figure class="still" data-still>
+        <div class="still__frame" data-still-media>
+          <img src="../images/gallery/ostrov/05.jpg" alt="" loading="lazy" />
+        </div>
+      </figure>
+      <figure class="still still--offset" data-still>
+        <div class="still__frame" data-still-media>
+          <img src="../images/gallery/ostrov/06.jpg" alt="" loading="lazy" />
+        </div>
+      </figure>
+    </div>
+  </section>
   </main>
+
+  <footer class="project-end">
+    <div class="project-end__frame">
+      <p class="footer__copy"><span data-i18n="footer.copy">© Sergey Полищук</span> · <span data-year></span></p>
+    </div>
+  </footer>
 
   <script src="../js/i18n.js"></script>
   <script src="../js/shared.js"></script>
+  <script src="../js/scroll-cue.js"></script>
   <script src="../js/project.js"></script>
+  <script src="../js/project-stills.js"></script>
 </body>
 </html>

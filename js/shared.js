@@ -92,8 +92,12 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
+  const yearText = String(new Date().getFullYear());
   const year = document.getElementById("year");
-  if (year) year.textContent = String(new Date().getFullYear());
+  if (year) year.textContent = yearText;
+  document.querySelectorAll("[data-year]").forEach((el) => {
+    el.textContent = yearText;
+  });
 
   // Expose for project pages if needed
   window.PoleshUI = { setLang, setFont, applyI18n, getLang, getFont };
