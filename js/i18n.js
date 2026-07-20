@@ -1,0 +1,143 @@
+/**
+ * RU / EN copy for polesh.pro
+ * Keys used via data-i18n="key" or data-i18n-html="key"
+ */
+window.POLESH_I18N = {
+  ru: {
+    "nav.projects": "Проекты",
+    "nav.about": "О себе",
+    "nav.contact": "Контакты",
+    "nav.back": "Все проекты",
+    "hero.role": "Архитектор · Дизайнер интерьеров",
+    "hero.name": "Sergey Полищук",
+    "hero.bio": "Создаю пространства гостеприимства и частные интерьеры, где материал, свет и сценарий жизни гостя складываются в цельный архитектурный жест. Минимализм без холодности — внимание к деталям и атмосфере.",
+    "hero.cta": "Смотреть проекты",
+    "projects.label": "Избранные проекты",
+    "projects.view": "Открыть проект",
+    "project.lobby.title": "Лобби бутик-отеля",
+    "project.lobby.tag": "Общественное пространство",
+    "project.lobby.card": "Волнообразный деревянный потолок, живые стены и сценарий встречи гостя — от входа до lounge.",
+    "project.lobby.lead": "Лобби как первое впечатление: тёплый свет, натуральные фактуры и плавная навигация по отелю.",
+    "project.lobby.meta1": "Тип — лобби и общественные зоны",
+    "project.lobby.meta2": "Материалы — дерево, терраццо, медь, живые растения",
+    "project.lobby.meta3": "Фокус — сценарий гостя и акустика пространства",
+    "project.ostrov.title": "Номер «Отель Остров»",
+    "project.ostrov.tag": "Гостевой номер",
+    "project.ostrov.card": "Тихая suite-композиция: камень, кожа, ротанг и мягкий свет лесного вида.",
+    "project.ostrov.lead": "Номер как убежище: тактильные материалы, приглушённый свет и ритуал отдыха.",
+    "project.ostrov.meta1": "Тип — suite / гостиничный номер",
+    "project.ostrov.meta2": "Материалы — камень, дерево, кожа, лён",
+    "project.ostrov.meta3": "Фокус — свет, текстура, приватность",
+    "project.sputnik.title": "Номер «Отель Спутник»",
+    "project.sputnik.tag": "Гостевой номер",
+    "project.sputnik.card": "Ретро-футуризм mid-century: тёплое дерево, характерная мебель и культурный жест эпохи.",
+    "project.sputnik.lead": "Интерьер с характером — отсылка к космической романтике и mid-century модерну.",
+    "project.sputnik.meta1": "Тип — тематический гостиничный номер",
+    "project.sputnik.meta2": "Материалы — дерево, стеклоблок, бархат, терраццо",
+    "project.sputnik.meta3": "Фокус — настроение, колористика, деталь",
+    "project.eco.title": "Номер «Отель Эко»",
+    "project.eco.tag": "Гостевой номер",
+    "project.eco.card": "Биофильный номер: живая стена, натуральные фактуры и спокойный графитовый фон.",
+    "project.eco.lead": "Природа становится частью архитектуры — зелень, дерево и мягкий дневной ритм.",
+    "project.eco.meta1": "Тип — эко / биофильный номер",
+    "project.eco.meta2": "Материалы — дерево, живые растения, текстиль",
+    "project.eco.meta3": "Фокус — воздух, зелень, спокойствие",
+    "project.scroll.hint": "Листайте — видео идёт, появляется описание",
+    "about.label": "Подход",
+    "about.text": "Работаю на стыке архитектуры и интерьера: от планировочной логики до тактильного финиша. Каждый проект — история места, а не набор трендов.",
+    "footer.tagline": "Архитектура и дизайн интерьеров",
+    "footer.contacts": "Контакты",
+    "footer.social": "Соцсети",
+    "footer.copy": "© Sergey Полищук",
+    "ui.lang": "Язык",
+    "ui.font": "Шрифт",
+    "ui.font.classic": "Классика",
+    "ui.font.modern": "Модерн",
+    "ui.font.editorial": "Редакторский",
+    "ui.font.soft": "Мягкий"
+  },
+  en: {
+    "nav.projects": "Projects",
+    "nav.about": "About",
+    "nav.contact": "Contact",
+    "nav.back": "All projects",
+    "hero.role": "Architect · Interior Designer",
+    "hero.name": "Sergey Polishchuk",
+    "hero.bio": "I design hospitality spaces and private interiors where material, light and the guest journey form a single architectural gesture. Minimalism without coldness — attention to detail and atmosphere.",
+    "hero.cta": "View projects",
+    "projects.label": "Selected works",
+    "projects.view": "View project",
+    "project.lobby.title": "Boutique Hotel Lobby",
+    "project.lobby.tag": "Public space",
+    "project.lobby.card": "A wave-like timber ceiling, living walls and a guest journey from entrance to lounge.",
+    "project.lobby.lead": "The lobby as first impression: warm light, natural textures and effortless wayfinding.",
+    "project.lobby.meta1": "Type — lobby & public zones",
+    "project.lobby.meta2": "Materials — timber, terrazzo, copper, living plants",
+    "project.lobby.meta3": "Focus — guest flow & spatial atmosphere",
+    "project.ostrov.title": "Hotel Ostrov Suite",
+    "project.ostrov.tag": "Guest room",
+    "project.ostrov.card": "A quiet suite: stone, leather, rattan and soft forest light.",
+    "project.ostrov.lead": "A room as retreat — tactile materials, muted light and the ritual of rest.",
+    "project.ostrov.meta1": "Type — suite / hotel room",
+    "project.ostrov.meta2": "Materials — stone, wood, leather, linen",
+    "project.ostrov.meta3": "Focus — light, texture, privacy",
+    "project.sputnik.title": "Hotel Sputnik Room",
+    "project.sputnik.tag": "Guest room",
+    "project.sputnik.card": "Mid-century retro-futurism: warm timber, signature furniture and a cultural gesture.",
+    "project.sputnik.lead": "An interior with character — space-age romance meets mid-century modern.",
+    "project.sputnik.meta1": "Type — themed hotel room",
+    "project.sputnik.meta2": "Materials — wood, glass block, velvet, terrazzo",
+    "project.sputnik.meta3": "Focus — mood, color, detail",
+    "project.eco.title": "Hotel Eco Room",
+    "project.eco.tag": "Guest room",
+    "project.eco.card": "A biophilic room: living wall, natural textures and a calm graphite backdrop.",
+    "project.eco.lead": "Nature becomes architecture — greenery, timber and a soft daylight rhythm.",
+    "project.eco.meta1": "Type — eco / biophilic room",
+    "project.eco.meta2": "Materials — wood, living plants, textiles",
+    "project.eco.meta3": "Focus — air, greenery, calm",
+    "project.scroll.hint": "Scroll — video plays, details appear",
+    "about.label": "Approach",
+    "about.text": "I work at the intersection of architecture and interiors — from planning logic to tactile finish. Each project is a story of place, not a set of trends.",
+    "footer.tagline": "Architecture & interior design",
+    "footer.contacts": "Contact",
+    "footer.social": "Social",
+    "footer.copy": "© Sergey Polishchuk",
+    "ui.lang": "Language",
+    "ui.font": "Typeface",
+    "ui.font.classic": "Classic",
+    "ui.font.modern": "Modern",
+    "ui.font.editorial": "Editorial",
+    "ui.font.soft": "Soft"
+  }
+};
+
+/**
+ * Free fonts (SIL Open Font License / Apache 2.0 via Google Fonts)
+ * Safe for commercial use.
+ */
+window.POLESH_FONTS = {
+  classic: {
+    id: "classic",
+    display: '"Cormorant Garamond", Georgia, serif',
+    body: '"Manrope", system-ui, sans-serif',
+    href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600&display=swap"
+  },
+  modern: {
+    id: "modern",
+    display: '"Fraunces", Georgia, serif',
+    body: '"Figtree", system-ui, sans-serif',
+    href: "https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap"
+  },
+  editorial: {
+    id: "editorial",
+    display: '"Libre Baskerville", Georgia, serif',
+    body: '"Source Sans 3", system-ui, sans-serif',
+    href: "https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap"
+  },
+  soft: {
+    id: "soft",
+    display: '"EB Garamond", Georgia, serif',
+    body: '"Nunito Sans", system-ui, sans-serif',
+    href: "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Nunito+Sans:wght@400;500;600&display=swap"
+  }
+};

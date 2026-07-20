@@ -3,245 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Александр Полищук — архитектор и дизайнер интерьеров. Портфолио проектов polesh.pro" />
-  <title>polesh — Александр Полищук</title>
-
-  <!-- Typography: Instrument Serif (display) + Instrument Sans (UI) -->
+  <meta name="description" content="Sergey Полищук — архитектор и дизайнер интерьеров. polesh.pro" />
+  <title>polesh — Sergey Полищук</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- ============================================================
-       HEADER — sticky текстовый логотип
-       ============================================================ -->
   <header class="site-header" id="site-header">
-    <a class="logo" href="#top" aria-label="polesh.pro — наверх">
+    <a class="logo" href="index.html" aria-label="polesh.pro">
       <span class="logo__word">polesh</span><span class="logo__tld">.pro</span>
     </a>
-    <nav class="nav" aria-label="Основная навигация">
-      <a href="#projects">Проекты</a>
-      <a href="#contact">Контакты</a>
-    </nav>
+
+    <div class="header__right">
+      <nav class="nav" aria-label="Primary">
+        <a href="#projects" data-i18n="nav.projects">Проекты</a>
+        <a href="#about" data-i18n="nav.about">О себе</a>
+        <a href="#contact" data-i18n="nav.contact">Контакты</a>
+      </nav>
+
+      <div class="controls" aria-label="Preferences">
+        <div class="control-group" role="group" aria-label="Language">
+          <button type="button" data-lang-btn="ru" class="is-active">RU</button>
+          <button type="button" data-lang-btn="en">EN</button>
+        </div>
+        <div class="control-group control-group--fonts" role="group" aria-label="Typeface">
+          <!-- Free fonts: SIL OFL / Apache 2.0 (Google Fonts) -->
+          <button type="button" data-font-btn="classic" class="is-active" data-i18n="ui.font.classic">Классика</button>
+          <button type="button" data-font-btn="modern" data-i18n="ui.font.modern">Модерн</button>
+          <button type="button" data-font-btn="editorial" data-i18n="ui.font.editorial">Редакторский</button>
+          <button type="button" data-font-btn="soft" data-i18n="ui.font.soft">Мягкий</button>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main id="top">
-    <!-- ============================================================
-         1. HERO
-         Фото: images/hero-car-16x9-outpaint-4k.png
-         (альтернатива: images/hero-car-16x9-b-4k.png)
-         ============================================================ -->
+  <main>
+    <!-- Hero: portrait + intro -->
     <section class="hero" aria-labelledby="hero-name">
+      <div class="hero__copy">
+        <p class="hero__eyebrow reveal" style="--d:0s" data-i18n="hero.role">Архитектор · Дизайнер интерьеров</p>
+        <h1 class="hero__name reveal" id="hero-name" style="--d:0.1s" data-i18n="hero.name">Sergey Полищук</h1>
+        <p class="hero__bio reveal" style="--d:0.2s" data-i18n="hero.bio">
+          Создаю пространства гостеприимства и частные интерьеры, где материал, свет и сценарий жизни гостя складываются в цельный архитектурный жест.
+        </p>
+        <a class="hero__cta reveal" style="--d:0.3s" href="#projects" data-i18n="hero.cta">Смотреть проекты</a>
+      </div>
       <div class="hero__media">
-        <!-- TODO: заменить src на финальное фото при необходимости -->
+        <!-- Hero photo -->
         <img
-          class="hero__photo"
-          src="images/hero-car-16x9-outpaint-4k.png"
-          alt="Александр Полищук"
+          src="images/hero-car-16x9-b-4k.png"
+          alt="Sergey Полищук"
           width="4096"
           height="2294"
           fetchpriority="high"
         />
-        <div class="hero__veil" aria-hidden="true"></div>
-      </div>
-
-      <div class="hero__content">
-        <p class="hero__eyebrow reveal" style="--d: 0s">Архитектор · Дизайнер интерьеров</p>
-        <h1 class="hero__name reveal" id="hero-name" style="--d: 0.12s">Александр&nbsp;Полищук</h1>
-        <!-- TODO: заменить биографию на реальный текст -->
-        <p class="hero__bio reveal" style="--d: 0.24s">
-          Проектирую пространства, в которых архитектура и интерьер работают как единая система —
-          от лобби бутик-отеля до приватных номеров. Внимание к материалу, свету и сценариям жизни
-          гостя. Работаю с объектами гостеприимства и частными резиденциями.
-        </p>
-        <a class="hero__cta reveal" href="#projects" style="--d: 0.36s">Смотреть проекты</a>
       </div>
     </section>
 
-    <!-- ============================================================
-         2. ПРОЕКТЫ — full-screen + scroll-scrub видео
-         Высота секции ≈ 250vh: sticky-кадр 100vh, скролл «прокручивает» ролик.
-         Видео: muted + playsinline, без autoplay на загрузке.
-         ============================================================ -->
-    <div class="projects" id="projects">
-
-      <!-- Project 1: Лобби -->
-      <section
-        class="project"
-        data-project
-        aria-labelledby="project-lobby-title"
-      >
-        <!--
-          VIDEO PLACEHOLDER — Лобби бутик-отеля
-          Путь: videos/fullpage-scroll-lobby.mp4
-          (или videos/project-1.mp4 после переименования)
-        -->
-        <div class="project__sticky">
-          <div class="project__video-wrap" data-parallax>
-            <video
-              class="project__video"
-              data-scrub-video
-              muted
-              playsinline
-              preload="auto"
-            >
-              <source src="videos/fullpage-scroll-lobby.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="project__overlay" data-project-overlay>
-            <div class="project__caption">
-              <p class="project__index">01</p>
-              <h2 class="project__title" id="project-lobby-title">Лобби бутик-отеля</h2>
-              <!-- TODO: описание проекта -->
-              <p class="project__desc">
-                Общественное пространство с волнообразным деревянным потолком, живыми стенами
-                и зонами отдыха — сценарий встречи гостя от входа до lounge и ресторана.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Project 2: Отель Остров -->
-      <section
-        class="project"
-        data-project
-        aria-labelledby="project-ostrov-title"
-      >
-        <!--
-          VIDEO PLACEHOLDER — Номер «Отель Остров»
-          Путь: videos/fullpage-scroll-walkthrough.mp4
-        -->
-        <div class="project__sticky">
-          <div class="project__video-wrap" data-parallax>
-            <video
-              class="project__video"
-              data-scrub-video
-              muted
-              playsinline
-              preload="metadata"
-            >
-              <source src="videos/fullpage-scroll-walkthrough.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="project__overlay" data-project-overlay>
-            <div class="project__caption">
-              <p class="project__index">02</p>
-              <h2 class="project__title" id="project-ostrov-title">Номер «Отель Остров»</h2>
-              <p class="project__desc">
-                Тихая suite-композиция: тёплое дерево, мягкий текстиль и вид на лес.
-                Интерьер построен вокруг ритуала отдыха и естественного света.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Project 3: Отель Спутник -->
-      <section
-        class="project"
-        data-project
-        aria-labelledby="project-sputnik-title"
-      >
-        <!--
-          VIDEO PLACEHOLDER — Номер «Отель Спутник»
-          Путь: videos/fullpage-scroll-spaceage.mp4
-        -->
-        <div class="project__sticky">
-          <div class="project__video-wrap" data-parallax>
-            <video
-              class="project__video"
-              data-scrub-video
-              muted
-              playsinline
-              preload="metadata"
-            >
-              <source src="videos/fullpage-scroll-spaceage.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="project__overlay" data-project-overlay>
-            <div class="project__caption">
-              <p class="project__index">03</p>
-              <h2 class="project__title" id="project-sputnik-title">Номер «Отель Спутник»</h2>
-              <p class="project__desc">
-                Ретро-футуризм mid-century: мозаичные панно, тёплый свет и характерная
-                мебель эпохи — номер как культурный жест, а не только функция.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Project 4: Отель Эко -->
-      <section
-        class="project"
-        data-project
-        aria-labelledby="project-eco-title"
-      >
-        <!--
-          VIDEO PLACEHOLDER — Номер «Отель Эко»
-          Путь: videos/fullpage-scroll-biophilic.mp4
-        -->
-        <div class="project__sticky">
-          <div class="project__video-wrap" data-parallax>
-            <video
-              class="project__video"
-              data-scrub-video
-              muted
-              playsinline
-              preload="metadata"
-            >
-              <source src="videos/fullpage-scroll-biophilic.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="project__overlay" data-project-overlay>
-            <div class="project__caption">
-              <p class="project__index">04</p>
-              <h2 class="project__title" id="project-eco-title">Номер «Отель Эко»</h2>
-              <p class="project__desc">
-                Биофильный номер: растения, натуральные фактуры и мягкий дневной свет.
-                Пространство, в котором природа становится частью архитектуры.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <!-- Project previews — photos only -->
+    <div class="section-head" id="projects">
+      <h2 data-i18n="projects.label">Избранные проекты</h2>
+      <span>04</span>
     </div>
+
+    <section class="projects">
+      <!-- 01 Lobby — preview: images/previews/lobby.jpg -->
+      <article class="project-card" data-card-reveal>
+        <a class="project-card__media" href="projects/lobby.html" tabindex="-1" aria-hidden="true">
+          <img src="images/previews/lobby.jpg" alt="" loading="lazy" />
+        </a>
+        <div class="project-card__body">
+          <p class="project-card__index">01</p>
+          <p class="project-card__tag" data-i18n="project.lobby.tag">Общественное пространство</p>
+          <h3 class="project-card__title">
+            <a href="projects/lobby.html" data-i18n="project.lobby.title">Лобби бутик-отеля</a>
+          </h3>
+          <p class="project-card__text" data-i18n="project.lobby.card">
+            Волнообразный деревянный потолок, живые стены и сценарий встречи гостя — от входа до lounge.
+          </p>
+          <a class="project-card__link" href="projects/lobby.html" data-i18n="projects.view">Открыть проект</a>
+        </div>
+      </article>
+
+      <!-- 02 Ostrov — preview: images/previews/ostrov.jpg -->
+      <article class="project-card" data-card-reveal>
+        <a class="project-card__media" href="projects/ostrov.html" tabindex="-1" aria-hidden="true">
+          <img src="images/previews/ostrov.jpg" alt="" loading="lazy" />
+        </a>
+        <div class="project-card__body">
+          <p class="project-card__index">02</p>
+          <p class="project-card__tag" data-i18n="project.ostrov.tag">Гостевой номер</p>
+          <h3 class="project-card__title">
+            <a href="projects/ostrov.html" data-i18n="project.ostrov.title">Номер «Отель Остров»</a>
+          </h3>
+          <p class="project-card__text" data-i18n="project.ostrov.card">
+            Тихая suite-композиция: камень, кожа, ротанг и мягкий свет лесного вида.
+          </p>
+          <a class="project-card__link" href="projects/ostrov.html" data-i18n="projects.view">Открыть проект</a>
+        </div>
+      </article>
+
+      <!-- 03 Sputnik — preview: images/previews/sputnik.jpg -->
+      <article class="project-card" data-card-reveal>
+        <a class="project-card__media" href="projects/sputnik.html" tabindex="-1" aria-hidden="true">
+          <img src="images/previews/sputnik.jpg" alt="" loading="lazy" />
+        </a>
+        <div class="project-card__body">
+          <p class="project-card__index">03</p>
+          <p class="project-card__tag" data-i18n="project.sputnik.tag">Гостевой номер</p>
+          <h3 class="project-card__title">
+            <a href="projects/sputnik.html" data-i18n="project.sputnik.title">Номер «Отель Спутник»</a>
+          </h3>
+          <p class="project-card__text" data-i18n="project.sputnik.card">
+            Ретро-футуризм mid-century: тёплое дерево, характерная мебель и культурный жест эпохи.
+          </p>
+          <a class="project-card__link" href="projects/sputnik.html" data-i18n="projects.view">Открыть проект</a>
+        </div>
+      </article>
+
+      <!-- 04 Eco — preview: images/previews/eco.jpg -->
+      <article class="project-card" data-card-reveal>
+        <a class="project-card__media" href="projects/eco.html" tabindex="-1" aria-hidden="true">
+          <img src="images/previews/eco.jpg" alt="" loading="lazy" />
+        </a>
+        <div class="project-card__body">
+          <p class="project-card__index">04</p>
+          <p class="project-card__tag" data-i18n="project.eco.tag">Гостевой номер</p>
+          <h3 class="project-card__title">
+            <a href="projects/eco.html" data-i18n="project.eco.title">Номер «Отель Эко»</a>
+          </h3>
+          <p class="project-card__text" data-i18n="project.eco.card">
+            Биофильный номер: живая стена, натуральные фактуры и спокойный графитовый фон.
+          </p>
+          <a class="project-card__link" href="projects/eco.html" data-i18n="projects.view">Открыть проект</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="about" id="about">
+      <p class="about__label" data-i18n="about.label">Подход</p>
+      <p class="about__text" data-i18n="about.text">
+        Работаю на стыке архитектуры и интерьера: от планировочной логики до тактильного финиша.
+      </p>
+    </section>
   </main>
 
-  <!-- ============================================================
-       FOOTER
-       TODO: заменить email, телефон и соцсети на реальные
-       ============================================================ -->
   <footer class="site-footer" id="contact">
-    <div class="footer__brand">
-      <span class="logo logo--footer">
-        <span class="logo__word">polesh</span><span class="logo__tld">.pro</span>
-      </span>
-      <p class="footer__tagline">Архитектура и дизайн интерьеров</p>
-    </div>
-
-    <div class="footer__cols">
+    <div class="footer__grid">
+      <div>
+        <span class="logo">
+          <span class="logo__word">polesh</span><span class="logo__tld">.pro</span>
+        </span>
+        <p class="footer__tagline" data-i18n="footer.tagline">Архитектура и дизайн интерьеров</p>
+      </div>
       <div class="footer__col">
-        <h3 class="footer__label">Контакты</h3>
-        <!-- TODO: реальные контакты -->
+        <h3 class="footer__label" data-i18n="footer.contacts">Контакты</h3>
+        <!-- TODO: real contacts -->
         <a href="mailto:hello@polesh.pro">hello@polesh.pro</a>
         <a href="tel:+70000000000">+7 (000) 000-00-00</a>
       </div>
       <div class="footer__col">
-        <h3 class="footer__label">Соцсети</h3>
-        <!-- TODO: реальные ссылки -->
-        <a href="#" rel="noopener noreferrer">Instagram</a>
-        <a href="#" rel="noopener noreferrer">Behance</a>
-        <a href="#" rel="noopener noreferrer">Telegram</a>
+        <h3 class="footer__label" data-i18n="footer.social">Соцсети</h3>
+        <a href="#">Instagram</a>
+        <a href="#">Behance</a>
+        <a href="#">Telegram</a>
       </div>
     </div>
-
-    <p class="footer__copy">© <span id="year"></span> Александр Полищук</p>
+    <p class="footer__copy"><span data-i18n="footer.copy">© Sergey Полищук</span> · <span id="year"></span></p>
   </footer>
 
-  <script src="js/main.js" defer></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

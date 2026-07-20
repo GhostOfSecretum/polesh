@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>polesh — Лобби бутик-отеля</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="project-page">
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <a class="logo" href="../index.html">
+      <span class="logo__word">polesh</span><span class="logo__tld">.pro</span>
+    </a>
+    <div class="header__right">
+      <a class="back-link" href="../index.html#projects" data-i18n="nav.back">Все проекты</a>
+      <div class="controls">
+        <div class="control-group" role="group">
+          <button type="button" data-lang-btn="ru" class="is-active">RU</button>
+          <button type="button" data-lang-btn="en">EN</button>
+        </div>
+        <div class="control-group control-group--fonts" role="group">
+          <button type="button" data-font-btn="classic" class="is-active" data-i18n="ui.font.classic">Классика</button>
+          <button type="button" data-font-btn="modern" data-i18n="ui.font.modern">Модерн</button>
+          <button type="button" data-font-btn="editorial" data-i18n="ui.font.editorial">Редакторский</button>
+          <button type="button" data-font-btn="soft" data-i18n="ui.font.soft">Мягкий</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-track" data-project-track>
+    <!--
+      VIDEO: ../videos/fullpage-scroll-lobby.mp4
+      PREVIEW PHOTO (home): ../images/previews/lobby.jpg
+    -->
+    <div class="project-stage-wrap">
+      <p class="project-hint" data-i18n="project.scroll.hint">Листайте, чтобы пройтись по пространству</p>
+      <div class="project-stage" data-project-stage>
+        <video data-bg-video muted playsinline loop preload="auto" autoplay>
+          <source src="../videos/fullpage-scroll-lobby.mp4" type="video/mp4" />
+        </video>
+        <div class="project-stage__veil"></div>
+      </div>
+
+      <div class="project-panels">
+        <div class="project-panel" data-reveal data-reveal-start="0.05" data-reveal-end="0.38">
+          <p class="project-panel__kicker">01</p>
+          <h1 class="project-panel__title" data-i18n="project.lobby.title">Лобби бутик-отеля</h1>
+          <p class="project-panel__text" data-i18n="project.lobby.lead">
+            Лобби как первое впечатление: тёплый свет, натуральные фактуры и плавная навигация по отелю.
+          </p>
+        </div>
+
+        <div class="project-panel" data-reveal data-reveal-start="0.4" data-reveal-end="0.72">
+          <p class="project-panel__kicker" data-i18n="project.lobby.tag">Общественное пространство</p>
+          <p class="project-panel__text" data-i18n="project.lobby.card">
+            Волнообразный деревянный потолок, живые стены и сценарий встречи гостя — от входа до lounge.
+          </p>
+          <ul class="project-panel__list">
+            <li data-i18n="project.lobby.meta1">Тип — лобби и общественные зоны</li>
+            <li data-i18n="project.lobby.meta2">Материалы — дерево, терраццо, медь, живые растения</li>
+          </ul>
+        </div>
+
+        <div class="project-panel" data-reveal data-reveal-start="0.74" data-reveal-end="1">
+          <p class="project-panel__text" data-i18n="project.lobby.meta3">Фокус — сценарий гостя и акустика пространства</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/shared.js"></script>
+  <script src="../js/project.js"></script>
+</body>
+</html>

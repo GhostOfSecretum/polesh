@@ -10,3 +10,4 @@ Thumbs.db
 node_modules/
 .vscode/
 .idea/
+images/*.mp4
