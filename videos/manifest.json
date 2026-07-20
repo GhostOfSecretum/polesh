@@ -1,0 +1,99 @@
+{
+  "aspect_ratio": "9:16",
+  "duration_sec": 5,
+  "model": "kling3_0_turbo",
+  "usage": "Scroll-scrub each clip in full-viewport sections for parallax feel",
+  "clips": [
+    {
+      "id": "01",
+      "file": "01-bedroom-wide.mp4",
+      "section": "hero-bedroom",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_070019_c684ca73-d2d1-446f-91d7-3643b6d12e1e.mp4"
+    },
+    {
+      "id": "02",
+      "file": "02-window-forest.mp4",
+      "section": "window-view",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_070020_1a1a9126-e5c5-4fad-ab60-0028aecbeaf7.mp4"
+    },
+    {
+      "id": "03",
+      "file": "03-console-hallway.mp4",
+      "section": "entry-console",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_070021_7a8f3069-49fc-47ff-bb10-182026d60a12.mp4"
+    },
+    {
+      "id": "04",
+      "file": "04-bed-wall.mp4",
+      "section": "bed-details",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_070023_72930f46-5ade-4636-832e-90bf3adf0420.mp4"
+    },
+    {
+      "id": "05",
+      "file": "05-wardrobe.mp4",
+      "section": "wardrobe",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_070023_2aebacab-bbaa-4697-b972-6ed05a0bcc0d.mp4"
+    },
+    {
+      "id": "06",
+      "file": "06-console-close.mp4",
+      "section": "console-closeup",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_070029_6eab0875-aef0-4226-87d1-d2c5a1abe101.mp4"
+    },
+    {
+      "id": "07",
+      "file": "07-lounge-window.mp4",
+      "section": "lounge",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_070029_c79e7a53-aa07-4c12-8c8b-3f2c8cc34df5.mp4"
+    },
+    {
+      "id": "08",
+      "file": "08-living-suite.mp4",
+      "section": "living",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_070032_80e0bb56-8259-44de-9104-f268804cc51e.mp4"
+    },
+    {
+      "id": "09",
+      "file": "09-bed-top.mp4",
+      "section": "bed-overhead",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_070033_6fde1185-931f-4ec6-909a-071f255f1a51.mp4"
+    }
+  ],
+  "fullpage": {
+    "file": "fullpage-scroll-walkthrough.mp4",
+    "duration_sec": 15,
+    "aspect_ratio": "9:16",
+    "model": "kling3_0",
+    "usage": "Single fixed full-viewport video; scrub currentTime by page scroll progress 0→1",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_073721_cfc80bf6-c471-411b-8571-2ca0d025463c.mp4",
+    "job_id": "cfc80bf6-c471-411b-8571-2ca0d025463c"
+  },
+  "fullpage_spaceage": {
+    "file": "fullpage-scroll-spaceage.mp4",
+    "duration_sec": 15,
+    "aspect_ratio": "9:16",
+    "model": "kling3_0",
+    "usage": "Single fixed full-viewport video; scrub currentTime by page scroll progress 0→1",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_122442_58108c74-c820-439c-967e-06f8601f6634.mp4",
+    "job_id": "58108c74-c820-439c-967e-06f8601f6634",
+    "note": "CDN download was slow from this environment; open URL to save locally"
+  },
+  "fullpage_biophilic": {
+    "file": "fullpage-scroll-biophilic.mp4",
+    "duration_sec": 15,
+    "aspect_ratio": "9:16",
+    "model": "kling3_0",
+    "usage": "Single fixed full-viewport video; scrub currentTime by page scroll progress 0→1",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_124431_c38415c7-81dc-4d63-9db6-090f1320eb40.mp4",
+    "job_id": "c38415c7-81dc-4d63-9db6-090f1320eb40"
+  },
+  "fullpage_lobby": {
+    "file": "fullpage-scroll-lobby.mp4",
+    "duration_sec": 15,
+    "aspect_ratio": "9:16",
+    "model": "kling3_0",
+    "usage": "Single fixed full-viewport video; scrub currentTime by page scroll progress 0→1",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_125422_04e8e8d4-0528-41fb-bf45-9e64bddce03f.mp4",
+    "job_id": "04e8e8d4-0528-41fb-bf45-9e64bddce03f"
+  }
+}
