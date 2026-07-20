@@ -87,6 +87,15 @@
     "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_124431_c38415c7-81dc-4d63-9db6-090f1320eb40.mp4",
     "job_id": "c38415c7-81dc-4d63-9db6-090f1320eb40"
   },
+  "fullpage_eco": {
+    "file": "fullpage-scroll-eco.mp4",
+    "duration_sec": 15,
+    "aspect_ratio": "9:16",
+    "model": "kling3_0",
+    "usage": "Autoplay muted loop on eco project page",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_191621_a5b468be-3db8-4789-b3ad-a477763918d6.mp4",
+    "job_id": "a5b468be-3db8-4789-b3ad-a477763918d6"
+  },
   "fullpage_lobby": {
     "file": "fullpage-scroll-lobby.mp4",
     "duration_sec": 15,
