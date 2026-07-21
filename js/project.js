@@ -64,8 +64,8 @@
       stage.style.transform = "none";
       return;
     }
-    const y = (progress - 0.5) * 56;
-    const scale = 1.08 + progress * 0.05;
+    const y = (progress - 0.5) * 28;
+    const scale = 1.04 + progress * 0.03;
     stage.style.transform = `translate3d(0, ${y.toFixed(2)}px, 0) scale(${scale.toFixed(4)})`;
   }
 
