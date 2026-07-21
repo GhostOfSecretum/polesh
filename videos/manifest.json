@@ -104,5 +104,21 @@
     "usage": "Single fixed full-viewport video; scrub currentTime by page scroll progress 0→1",
     "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_125422_04e8e8d4-0528-41fb-bf45-9e64bddce03f.mp4",
     "job_id": "04e8e8d4-0528-41fb-bf45-9e64bddce03f"
+  },
+  "fullpage_artdeco": {
+    "file": "fullpage-scroll-artdeco.mp4",
+    "duration_sec": 18,
+    "aspect_ratio": "9:16",
+    "model": "ffmpeg-kenburns",
+    "usage": "Autoplay muted loop on artdeco project page. Interim from stills; replace when Higgsfield session works.",
+    "note": "Built from gallery/artdeco 01–06 with slow zoompan; Higgsfield upload auth failed during generation"
+  },
+  "fullpage_renaissance": {
+    "file": "fullpage-scroll-renaissance.mp4",
+    "duration_sec": 18,
+    "aspect_ratio": "9:16",
+    "model": "ffmpeg-kenburns",
+    "usage": "Autoplay muted loop on renaissance project page. Interim from stills; replace when Higgsfield session works.",
+    "note": "Built from gallery/renaissance 01–06 with slow zoompan; Higgsfield upload auth failed during generation"
   }
 }

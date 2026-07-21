@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>polesh — Загородный дом Ренессанс</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="project-page">
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <a class="logo" href="../index.html">
+      <span class="logo__word">polesh</span><span class="logo__tld">.pro</span>
+    </a>
+    <div class="header__right">
+      <a class="back-link" href="../index.html#projects" data-i18n="nav.back">Все проекты</a>
+      <div class="controls">
+        <div class="control-group" role="group">
+          <button type="button" data-lang-btn="ru" class="is-active">RU</button>
+          <button type="button" data-lang-btn="en">EN</button>
+        </div>
+        <div class="control-group control-group--fonts" role="group">
+          <button type="button" data-font-btn="classic" class="is-active" data-i18n="ui.font.classic">Классика</button>
+          <button type="button" data-font-btn="modern" data-i18n="ui.font.modern">Модерн</button>
+          <button type="button" data-font-btn="editorial" data-i18n="ui.font.editorial">Редакторский</button>
+          <button type="button" data-font-btn="soft" data-i18n="ui.font.soft">Мягкий</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+  <div class="project-track" data-project-track>
+    <!-- VIDEO: ../videos/fullpage-scroll-renaissance.mp4 -->
+    <div class="project-stage-wrap">
+      <button
+        type="button"
+        class="scroll-cue"
+        data-scroll-cue
+        data-scroll-amount="900"
+        data-i18n-aria="scroll.cue.aria"
+        aria-label="Прокрутить вниз"
+      >
+        <span class="scroll-cue__mouse" aria-hidden="true"><span class="scroll-cue__wheel"></span></span>
+        <span class="scroll-cue__label" data-i18n="scroll.cue">Листайте вниз</span>
+        <span class="scroll-cue__chevron" aria-hidden="true"></span>
+      </button>
+      <div class="project-stage" data-project-stage>
+        <video data-bg-video muted playsinline loop preload="auto" autoplay>
+          <source src="../videos/fullpage-scroll-renaissance.mp4" type="video/mp4" />
+        </video>
+        <div class="project-stage__veil"></div>
+      </div>
+
+      <div class="project-panels">
+        <div class="project-panel" data-reveal data-reveal-start="0.05" data-reveal-end="0.38">
+          <p class="project-panel__kicker">06</p>
+          <h1 class="project-panel__title" data-i18n="project.renaissance.title">Загородный дом «Ренессанс»</h1>
+          <p class="project-panel__text" data-i18n="project.renaissance.lead">
+            Тёплое дерево, камень и спокойный свет — современный загородный дом в КП «Ренессанс».
+          </p>
+        </div>
+
+        <div class="project-panel" data-reveal data-reveal-start="0.4" data-reveal-end="0.72">
+          <p class="project-panel__kicker" data-i18n="project.renaissance.tag">Частный интерьер</p>
+          <p class="project-panel__text" data-i18n="project.renaissance.card">
+            Гостиная и ванная в единой палитре: натуральные фактуры и собранная геометрия.
+          </p>
+          <ul class="project-panel__list">
+            <li data-i18n="project.renaissance.meta1">Тип — загородный дом, КП «Ренессанс»</li>
+            <li data-i18n="project.renaissance.meta2">Материалы — дерево, камень, стекло, текстиль</li>
+          </ul>
+        </div>
+
+        <div class="project-panel" data-reveal data-reveal-start="0.74" data-reveal-end="1">
+          <p class="project-panel__text" data-i18n="project.renaissance.meta3">Фокус — тепло, материал, повседневный ритуал</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="project-stills" data-project-stills aria-labelledby="stills-heading">
+    <div class="project-stills__head">
+      <p class="project-stills__label" id="stills-heading" data-i18n="project.stills.label">Кадры проекта</p>
+      <p class="project-stills__sub" data-i18n="project.stills.sub">Статичные виды пространства после прохода</p>
+    </div>
+    <div class="project-stills__grid">
+      <figure class="still still--wide" data-still>
+        <div class="still__frame" data-still-media>
+          <img src="../images/gallery/renaissance/01.jpg" alt="" loading="lazy" />
+        </div>
+      </figure>
+      <figure class="still still--tall" data-still>
+        <div class="still__frame" data-still-media>
+          <img src="../images/gallery/renaissance/02.jpg" alt="" loading="lazy" />
+        </div>
+      </figure>
+      <figure class="still still--tall still--offset" data-still>
+        <div class="still__frame" data-still-media>
+          <img src="../images/gallery/renaissance/03.jpg" alt="" loading="lazy" />
+        </div>
+      </figure>
+      <figure class="still still--wide" data-still>
+        <div class="still__frame" data-still-media>
+          <img src="../images/gallery/renaissance/04.jpg" alt="" loading="lazy" />
+        </div>
+      </figure>
+      <figure class="still" data-still>
+        <div class="still__frame" data-still-media>
+          <img src="../images/gallery/renaissance/05.jpg" alt="" loading="lazy" />
+        </div>
+      </figure>
+      <figure class="still still--offset" data-still>
+        <div class="still__frame" data-still-media>
+          <img src="../images/gallery/renaissance/06.jpg" alt="" loading="lazy" />
+        </div>
+      </figure>
+    </div>
+  </section>
+  </main>
+
+  <footer class="project-end">
+    <div class="project-end__frame">
+      <p class="footer__copy"><span data-i18n="footer.copy">© Sergey Полещук</span> · <span data-year></span></p>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/shared.js"></script>
+  <script src="../js/scroll-cue.js"></script>
+  <script src="../js/project.js"></script>
+  <script src="../js/project-stills.js"></script>
+</body>
+</html>
