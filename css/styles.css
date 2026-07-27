@@ -472,13 +472,192 @@ body::before {
 }
 
 /* ------------------------------------------------------------
+   Contact form
+   ------------------------------------------------------------ */
+
+.contact {
+  background: var(--dark);
+  color: #f3efe8;
+  padding: clamp(3.5rem, 9vh, 6rem) clamp(1.25rem, 4vw, 3.5rem) clamp(2.5rem, 5vh, 3.5rem);
+  border-top: 1px solid rgba(243, 239, 232, 0.08);
+}
+
+.contact__inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+
+.contact__label {
+  margin: 0 0 0.85rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #c9a77a;
+}
+
+.contact__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2rem, 1.4rem + 2.2vw, 3.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.contact__text {
+  margin: 1rem 0 0;
+  max-width: 28rem;
+  color: rgba(243, 239, 232, 0.58);
+  font-size: 0.98rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.contact-form__honey {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+}
+
+.contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.15rem;
+}
+
+.contact-form__field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.contact-form__field > span {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(243, 239, 232, 0.45);
+}
+
+.contact-form__field input,
+.contact-form__field textarea {
+  width: 100%;
+  margin: 0;
+  padding: 0.85rem 0 0.7rem;
+  border: 0;
+  border-bottom: 1px solid rgba(243, 239, 232, 0.18);
+  border-radius: 0;
+  background: transparent;
+  color: #f3efe8;
+  font: inherit;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.3s var(--ease-soft);
+}
+
+.contact-form__phone {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  border-bottom: 1px solid rgba(243, 239, 232, 0.18);
+  transition: border-color 0.3s var(--ease-soft);
+}
+
+.contact-form__phone:focus-within {
+  border-bottom-color: #c9a77a;
+}
+
+.contact-form__phone-prefix {
+  flex: 0 0 auto;
+  padding: 0.85rem 0 0.7rem;
+  color: rgba(243, 239, 232, 0.7);
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+.contact-form__phone input {
+  border-bottom: 0;
+  padding-left: 0;
+}
+
+.contact-form__phone input:focus {
+  border-bottom-color: transparent;
+}
+
+.contact-form__field input::placeholder,
+.contact-form__field textarea::placeholder {
+  color: rgba(243, 239, 232, 0.32);
+}
+
+.contact-form__field input:focus,
+.contact-form__field textarea:focus {
+  border-bottom-color: #c9a77a;
+}
+
+.contact-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin-top: 0.35rem;
+}
+
+.contact-form__submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.15rem 0;
+  border-bottom: 1px solid #c9a77a;
+  color: #f3efe8;
+  letter-spacing: 0.04em;
+  transition: gap 0.35s var(--ease), opacity 0.3s var(--ease-soft);
+}
+
+.contact-form__submit::after {
+  content: "→";
+  transition: transform 0.35s var(--ease);
+}
+
+.contact-form__submit:hover {
+  gap: 0.95rem;
+}
+
+.contact-form__submit:hover::after {
+  transform: translateX(2px);
+}
+
+.contact-form__submit:disabled,
+.contact-form__submit[data-busy] {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.contact-form__status {
+  margin: 0;
+  font-size: 0.88rem;
+  color: rgba(243, 239, 232, 0.55);
+}
+
+.contact-form__status.is-ok { color: #c9a77a; }
+.contact-form__status.is-err { color: #e0a090; }
+
+/* ------------------------------------------------------------
    Footer
    ------------------------------------------------------------ */
 
 .site-footer {
   background: var(--dark);
   color: #f3efe8;
-  padding: clamp(3rem, 7vh, 4.5rem) clamp(1.25rem, 4vw, 3.5rem) 2rem;
+  padding: clamp(2rem, 5vh, 3rem) clamp(1.25rem, 4vw, 3.5rem) 2rem;
+  border-top: 1px solid rgba(243, 239, 232, 0.08);
 }
 
 .footer__grid {
@@ -968,6 +1147,14 @@ body::before {
   }
 
   .footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form__row {
     grid-template-columns: 1fr;
   }
 

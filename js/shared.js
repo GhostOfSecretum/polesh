@@ -32,6 +32,11 @@
       if (dict[key] != null) el.setAttribute("aria-label", dict[key]);
     });
 
+    document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-placeholder");
+      if (dict[key] != null) el.setAttribute("placeholder", dict[key]);
+    });
+
     document.querySelectorAll("[data-lang-btn]").forEach((btn) => {
       btn.classList.toggle("is-active", btn.getAttribute("data-lang-btn") === lang);
       btn.setAttribute("aria-pressed", btn.getAttribute("data-lang-btn") === lang ? "true" : "false");
