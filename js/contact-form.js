@@ -1,13 +1,15 @@
 /**
  * Contact form → FormSubmit → polesh.pro@yandex.ru
+ * Uses classic POST (more reliable than AJAX) + local validation.
  */
 (() => {
-  const ENDPOINT = "https://formsubmit.co/ajax/polesh.pro@yandex.ru";
   const form = document.querySelector("[data-contact-form]");
   if (!form) return;
 
   const statusEl = form.querySelector("[data-contact-status]");
   const submitBtn = form.querySelector('button[type="submit"]');
+  const phoneInput = form.querySelector("[data-phone-local]");
+  const nextInput = form.querySelector("[data-contact-next]");
 
   function t(key, fallback) {
     const lang = (window.PoleshUI && window.PoleshUI.getLang && window.PoleshUI.getLang()) || "ru";
@@ -27,11 +29,8 @@
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
   }
 
-  const phoneInput = form.querySelector("[data-phone-local]");
-
   function normalizePhoneDigits(raw) {
     let digits = String(raw || "").replace(/\D/g, "");
-    // If paste includes country code 7/8, keep only the local 10 digits
     if (digits.length >= 11 && (digits.startsWith("7") || digits.startsWith("8"))) {
       digits = digits.slice(1);
     }
@@ -57,10 +56,20 @@
     return digits ? `+7${digits}` : "";
   }
 
+  function ensureHidden(name) {
+    let el = form.querySelector(`input[type="hidden"][name="${name}"]`);
+    if (!el) {
+      el = document.createElement("input");
+      el.type = "hidden";
+      el.name = name;
+      form.appendChild(el);
+    }
+    return el;
+  }
+
   if (phoneInput) {
     phoneInput.addEventListener("input", () => {
-      const formatted = formatPhoneLocal(phoneInput.value);
-      phoneInput.value = formatted;
+      phoneInput.value = formatPhoneLocal(phoneInput.value);
     });
 
     phoneInput.addEventListener("paste", (event) => {
@@ -70,15 +79,28 @@
     });
   }
 
-  form.addEventListener("submit", async (event) => {
+  // Success return from FormSubmit (?sent=1)
+  try {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("sent") === "1") {
+      setStatus(t("contact.success", "Заявка отправлена. Скоро отвечу."), "ok");
+      params.delete("sent");
+      const clean = `${window.location.pathname}${params.toString() ? `?${params}` : ""}${window.location.hash || "#contact"}`;
+      window.history.replaceState({}, "", clean);
+    }
+  } catch (_) {
+    /* ignore */
+  }
+
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const data = new FormData(form);
     const name = String(data.get("name") || "").trim();
     const email = String(data.get("email") || "").trim();
-    const phone = fullPhoneFromLocal(data.get("phone"));
     const message = String(data.get("message") || "").trim();
     const honey = String(data.get("_honey") || "").trim();
+    const phone = fullPhoneFromLocal(phoneInput ? phoneInput.value : data.get("phone"));
 
     if (honey) return;
 
@@ -91,47 +113,27 @@
       return;
     }
 
+    // Return URL after FormSubmit processes the request
+    if (nextInput) {
+      const url = new URL(window.location.href);
+      url.searchParams.set("sent", "1");
+      url.hash = "contact";
+      nextInput.value = url.toString();
+    }
+
+    // Send full international phone
+    if (phoneInput) {
+      phoneInput.removeAttribute("name");
+    }
+    ensureHidden("phone").value = phone || "—";
+
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.dataset.busy = "1";
     }
     setStatus(t("contact.sending", "Отправляем…"), null);
 
-    try {
-      const res = await fetch(ENDPOINT, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          phone: phone || "—",
-          message,
-          _subject: "Заявка с polesh.pro",
-          _template: "table",
-          _captcha: "false"
-        })
-      });
-
-      if (!res.ok) throw new Error("submit_failed");
-
-      form.reset();
-      setStatus(t("contact.success", "Заявка отправлена. Скоро отвечу."), "ok");
-    } catch (_) {
-      setStatus(
-        t(
-          "contact.error.send",
-          "Не удалось отправить. Напишите напрямую: polesh.pro@yandex.ru"
-        ),
-        "err"
-      );
-    } finally {
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        delete submitBtn.dataset.busy;
-      }
-    }
+    // Native POST — FormSubmit handles delivery + first-time activation page
+    form.submit();
   });
 })();
