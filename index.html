@@ -3,16 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sergey Полещук — архитектор и дизайнер интерьеров. polesh.pro" />
-  <title>polesh — Sergey Полещук</title>
+  <title data-i18n-title="meta.home.title">Сергей Полещук — архитектор и дизайнер интерьеров</title>
+  <meta name="description" data-i18n-content="meta.home.description" content="Сергей Полещук (Sergey Poleshchuk) — архитектор и дизайнер интерьеров. Портфолио гостиничных пространств и частных интерьеров: лобби, номера, особняки. polesh.pro." />
+  <meta name="author" content="Сергей Полещук" />
+  <link rel="canonical" href="https://polesh.pro/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:site_name" content="polesh.pro" />
+  <meta property="og:title" data-i18n-content="meta.home.title" content="Сергей Полещук — архитектор и дизайнер интерьеров" />
+  <meta property="og:description" data-i18n-content="meta.home.description" content="Сергей Полещук (Sergey Poleshchuk) — архитектор и дизайнер интерьеров. Портфолио гостиничных пространств и частных интерьеров: лобби, номера, особняки. polesh.pro." />
+  <meta property="og:url" content="https://polesh.pro/" />
+  <meta property="og:image" content="https://polesh.pro/images/portrait-lobby-no-watch.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" data-i18n-content="meta.home.title" content="Сергей Полещук — архитектор и дизайнер интерьеров" />
+  <meta name="twitter:description" data-i18n-content="meta.home.description" content="Сергей Полещук (Sergey Poleshchuk) — архитектор и дизайнер интерьеров. Портфолио гостиничных пространств и частных интерьеров: лобби, номера, особняки. polesh.pro." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://polesh.pro/#website",
+        "url": "https://polesh.pro/",
+        "name": "polesh.pro",
+        "inLanguage": ["ru", "en"],
+        "publisher": { "@id": "https://polesh.pro/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://polesh.pro/#person",
+        "name": "Сергей Полещук",
+        "alternateName": "Sergey Poleshchuk",
+        "jobTitle": "Архитектор и дизайнер интерьеров",
+        "description": "Архитектор и дизайнер интерьеров. Гостиничные пространства и частные интерьеры.",
+        "url": "https://polesh.pro/",
+        "image": "https://polesh.pro/images/portrait-lobby-no-watch.png",
+        "email": "mailto:polesh.pro@yandex.ru",
+        "knowsAbout": ["архитектура", "дизайн интерьеров", "гостиничные интерьеры", "частные резиденции"]
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="css/styles.css" />
+  <script>
+    try {
+      var allowed = ["garden", "night", "park", "stone"];
+      var t = localStorage.getItem("polesh-theme");
+      document.documentElement.dataset.theme = allowed.indexOf(t) >= 0 ? t : "night";
+    } catch (e) {
+      document.documentElement.dataset.theme = "night";
+    }
+  </script>
 </head>
 <body>
   <header class="site-header" id="site-header">
     <a class="logo" href="index.html" aria-label="polesh.pro">
-      <span class="logo__word">polesh</span><span class="logo__tld">.pro</span>
+      <img class="logo__img logo__img--ink" src="images/logo-lockup.png" alt="" width="268" height="46" />
+      <img class="logo__img logo__img--paper" src="images/logo-lockup-on-dark.png" alt="" width="268" height="46" />
     </a>
 
     <div class="header__right">
@@ -34,6 +84,24 @@
           <button type="button" data-font-btn="editorial" data-i18n="ui.font.editorial">Редакторский</button>
           <button type="button" data-font-btn="soft" data-i18n="ui.font.soft">Мягкий</button>
         </div>
+        <div class="control-group control-group--themes" role="group" data-i18n-aria="ui.theme" aria-label="Стиль">
+          <button type="button" data-theme-btn="garden">
+            <span class="theme-swatch" style="--sw:#1d4ed8"></span>
+            <span class="theme-label" data-i18n="ui.theme.garden">Сад</span>
+          </button>
+          <button type="button" data-theme-btn="night" class="is-active">
+            <span class="theme-swatch" style="--sw:#d4b483"></span>
+            <span class="theme-label" data-i18n="ui.theme.night">Ночь</span>
+          </button>
+          <button type="button" data-theme-btn="park">
+            <span class="theme-swatch theme-swatch--split" style="--sw:#3b6fff;--sw2:#6faf4a"></span>
+            <span class="theme-label" data-i18n="ui.theme.park">Парк</span>
+          </button>
+          <button type="button" data-theme-btn="stone">
+            <span class="theme-swatch" style="--sw:#3f6f64"></span>
+            <span class="theme-label" data-i18n="ui.theme.stone">Камень</span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -43,21 +111,36 @@
     <section class="hero" aria-labelledby="hero-name">
       <div class="hero__copy">
         <p class="hero__eyebrow reveal" style="--d:0s" data-i18n="hero.role">Архитектор · Дизайнер интерьеров</p>
-        <h1 class="hero__name reveal" id="hero-name" style="--d:0.1s" data-i18n="hero.name">Sergey Полещук</h1>
+        <h1 class="hero__name reveal" id="hero-name" style="--d:0.1s" data-i18n="hero.name">Сергей Полещук</h1>
         <p class="hero__bio reveal" style="--d:0.2s" data-i18n="hero.bio">
           Создаю пространства гостеприимства и частные интерьеры, где материал, свет и сценарий жизни гостя складываются в цельный архитектурный жест.
         </p>
         <a class="hero__cta reveal" style="--d:0.3s" href="#projects" data-i18n="hero.cta">Смотреть проекты</a>
       </div>
       <div class="hero__media">
-        <!-- Hero photo -->
         <img
           src="images/portrait-lobby-no-watch.png"
-          alt="Sergey Полещук"
+          alt="Сергей Полещук — архитектор и дизайнер интерьеров"
+          data-i18n-alt="hero.portrait.alt"
           width="1024"
           height="1536"
           fetchpriority="high"
+          data-hero-portrait
         />
+        <div class="portrait-picker" role="group" data-i18n-aria="ui.portrait.aria" aria-label="Портрет">
+          <button type="button" data-portrait-btn="lobby" class="is-active" aria-pressed="true">
+            <img src="images/portrait-lobby-no-watch.png" alt="" />
+          </button>
+          <button type="button" data-portrait-btn="garden-1" aria-pressed="false">
+            <img src="images/portrait-garden-01.png" alt="" />
+          </button>
+          <button type="button" data-portrait-btn="garden-2" aria-pressed="false">
+            <img src="images/portrait-garden-02.png" alt="" />
+          </button>
+          <button type="button" data-portrait-btn="garden-3" aria-pressed="false">
+            <img src="images/portrait-garden-03.png" alt="" />
+          </button>
+        </div>
       </div>
       <button
         type="button"
@@ -265,7 +348,8 @@
     <div class="footer__grid">
       <div>
         <span class="logo">
-          <span class="logo__word">polesh</span><span class="logo__tld">.pro</span>
+          <img class="logo__img logo__img--ink" src="images/logo-lockup.png" alt="polesh.pro" width="268" height="46" />
+          <img class="logo__img logo__img--paper" src="images/logo-lockup-on-dark.png" alt="" width="268" height="46" />
         </span>
         <p class="footer__tagline" data-i18n="footer.tagline">Архитектура и дизайн интерьеров</p>
       </div>
@@ -280,7 +364,7 @@
         <a href="#">Telegram</a>
       </div>
     </div>
-    <p class="footer__copy"><span data-i18n="footer.copy">© Sergey Полещук</span> · <span id="year"></span></p>
+    <p class="footer__copy"><span data-i18n="footer.copy">© Сергей Полещук</span> · <span id="year"></span></p>
   </footer>
 
   <script src="js/i18n.js"></script>
