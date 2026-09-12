@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="stone">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n-title="meta.folio.title">Проекты — Сергей Полещук</title>
+  <meta name="description" data-i18n-content="meta.folio.description" content="Портфолио Сергея Полещука: жилые и коммерческие интерьеры — дома, квартиры, бутик-отель." />
+  <meta name="author" content="Сергей Полещук" />
+  <link rel="canonical" href="https://polesh.pro/projects.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:site_name" content="polesh.pro" />
+  <meta property="og:title" data-i18n-content="meta.folio.title" content="Проекты — Сергей Полещук" />
+  <meta property="og:description" data-i18n-content="meta.folio.description" content="Портфолио Сергея Полещука: жилые и коммерческие интерьеры — дома, квартиры, бутик-отель." />
+  <meta property="og:url" content="https://polesh.pro/projects.html" />
+  <meta property="og:image" content="https://polesh.pro/images/previews/lobby.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script>
+    try {
+      var allowed = ["night", "stone"];
+      var t = localStorage.getItem("polesh-theme");
+      document.documentElement.dataset.theme = allowed.indexOf(t) >= 0 ? t : "stone";
+    } catch (e) {
+      document.documentElement.dataset.theme = "stone";
+    }
+  </script>
+</head>
+<body class="folio-page">
+  <header class="site-header" id="site-header">
+    <a class="logo" href="index.html" aria-label="polesh.pro">
+      <img class="logo__img logo__img--ink" src="images/logo-lockup.png" alt="" width="268" height="46" />
+      <img class="logo__img logo__img--paper" src="images/logo-lockup-on-dark.png" alt="" width="268" height="46" />
+    </a>
+
+    <div class="header__right">
+      <nav class="nav" aria-label="Primary">
+        <a href="projects.html" aria-current="page" data-i18n="nav.projects">Проекты</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Контакты</a>
+      </nav>
+
+      <div class="controls" aria-label="Preferences">
+        <div class="control-group" role="group" aria-label="Language">
+          <button type="button" data-lang-btn="ru" class="is-active">RU</button>
+          <button type="button" data-lang-btn="en">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="folio-hero" aria-labelledby="folio-title">
+      <p class="folio-hero__eyebrow reveal" style="--d:0s" data-i18n="folio.eyebrow">Портфолио</p>
+      <h1 class="folio-hero__title reveal" id="folio-title" style="--d:0.08s" data-i18n="folio.title">Проекты</h1>
+      <p class="folio-hero__lead reveal" style="--d:0.16s" data-i18n="folio.lead">
+        Два направления — частные интерьеры и пространства гостеприимства. Каждый проект открывается отдельной галереей.
+      </p>
+    </section>
+
+    <div class="folio-gates">
+      <a class="folio-gate reveal" style="--d:0.22s" href="#residential" data-folio-gate="residential">
+        <img src="images/previews/artdeco.jpg" alt="" />
+        <span class="folio-gate__text">
+          <span class="folio-gate__kicker" data-i18n="folio.residential.kicker">Частные интерьеры</span>
+          <span class="folio-gate__name" data-i18n="folio.residential">Жилые</span>
+          <span class="folio-gate__hint" data-i18n="folio.residential.lead">Дома, квартиры, таунхаусы</span>
+        </span>
+      </a>
+      <a class="folio-gate reveal" style="--d:0.3s" href="#commercial" data-folio-gate="commercial">
+        <img src="images/previews/lobby.jpg" alt="" />
+        <span class="folio-gate__text">
+          <span class="folio-gate__kicker" data-i18n="folio.commercial.kicker">Гостеприимство</span>
+          <span class="folio-gate__name" data-i18n="folio.commercial">Коммерческие</span>
+          <span class="folio-gate__hint" data-i18n="folio.commercial.lead">Отель и общественные пространства</span>
+        </span>
+      </a>
+    </div>
+
+    <section class="folio-chapter" id="residential" aria-labelledby="residential-title">
+      <div class="section-head">
+        <h2 id="residential-title" data-i18n="folio.residential">Жилые</h2>
+        <span data-folio-count="residential">09</span>
+      </div>
+      <div class="folio-grid" data-folio="residential"></div>
+    </section>
+
+    <section class="folio-chapter" id="commercial" aria-labelledby="commercial-title">
+      <div class="section-head">
+        <h2 id="commercial-title" data-i18n="folio.commercial">Коммерческие</h2>
+        <span data-folio-count="commercial">12</span>
+      </div>
+      <div class="folio-grid" data-folio="commercial"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer__grid">
+      <div>
+        <span class="logo">
+          <img class="logo__img logo__img--ink" src="images/logo-lockup.png" alt="polesh.pro" width="268" height="46" />
+          <img class="logo__img logo__img--paper" src="images/logo-lockup-on-dark.png" alt="" width="268" height="46" />
+        </span>
+        <p class="footer__tagline" data-i18n="footer.tagline">Архитектура и дизайн интерьеров</p>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__label" data-i18n="footer.contacts">Контакты</h3>
+        <a href="mailto:polesh.pro@yandex.ru">polesh.pro@yandex.ru</a>
+        <a href="tel:+70000000000">+7 (000) 000-00-00</a>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__label" data-i18n="footer.social">Соцсети</h3>
+        <a href="#">Instagram</a>
+        <a href="#">Telegram</a>
+      </div>
+    </div>
+    <p class="footer__copy"><span data-i18n="footer.copy">© Сергей Полещук</span> · <span id="year"></span></p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/works.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/folio.js"></script>
+</body>
+</html>
