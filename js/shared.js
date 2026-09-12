@@ -1,34 +1,30 @@
 /**
- * Shared UI: language + font + theme switchers, i18n apply, sticky header
+ * Shared UI: language + theme switchers, i18n apply, sticky header
  */
 (() => {
   const LANG_KEY = "polesh-lang";
-  const FONT_KEY = "polesh-font";
   const THEME_KEY = "polesh-theme";
-  const THEMES = ["night", "stone"];
+  const THEMES = ["stone", "night"];
+  const DEFAULT_THEME = "stone";
 
   function getLang() {
     return localStorage.getItem(LANG_KEY) || "ru";
   }
 
-  function getFont() {
-    return localStorage.getItem(FONT_KEY) || "classic";
-  }
-
   function getTheme() {
     const stored = localStorage.getItem(THEME_KEY);
-    return THEMES.includes(stored) ? stored : "night";
+    return THEMES.includes(stored) ? stored : DEFAULT_THEME;
   }
 
   const THEME_MARKUP = `
     <div class="control-group control-group--themes" role="group" data-i18n-aria="ui.theme" aria-label="Стиль">
-      <button type="button" data-theme-btn="night">
-        <span class="theme-swatch" style="--sw:#d4b483"></span>
-        <span class="theme-label" data-i18n="ui.theme.night">Ночь</span>
-      </button>
       <button type="button" data-theme-btn="stone">
         <span class="theme-swatch" style="--sw:#3f6f64"></span>
         <span class="theme-label" data-i18n="ui.theme.stone">Камень</span>
+      </button>
+      <button type="button" data-theme-btn="night">
+        <span class="theme-swatch" style="--sw:#d4b483"></span>
+        <span class="theme-label" data-i18n="ui.theme.night">Ночь</span>
       </button>
     </div>
   `;
@@ -102,17 +98,13 @@
     if (link.href !== href) link.href = href;
   }
 
-  function applyFont(fontId) {
-    const pack = (window.POLESH_FONTS && window.POLESH_FONTS[fontId]) || window.POLESH_FONTS.classic;
+  function applyFont() {
+    const pack = window.POLESH_FONTS && window.POLESH_FONTS.classic;
+    if (!pack) return;
     loadFontStylesheet(pack.href);
     document.documentElement.style.setProperty("--font-display", pack.display);
     document.documentElement.style.setProperty("--font-body", pack.body);
     document.documentElement.dataset.font = pack.id;
-
-    document.querySelectorAll("[data-font-btn]").forEach((btn) => {
-      btn.classList.toggle("is-active", btn.getAttribute("data-font-btn") === pack.id);
-      btn.setAttribute("aria-pressed", btn.getAttribute("data-font-btn") === pack.id ? "true" : "false");
-    });
   }
 
   function setLang(lang) {
@@ -120,13 +112,8 @@
     applyI18n(lang);
   }
 
-  function setFont(fontId) {
-    localStorage.setItem(FONT_KEY, fontId);
-    applyFont(fontId);
-  }
-
   function applyTheme(themeId) {
-    const id = THEMES.includes(themeId) ? themeId : "night";
+    const id = THEMES.includes(themeId) ? themeId : DEFAULT_THEME;
     document.documentElement.dataset.theme = id;
 
     document.querySelectorAll("[data-theme-btn]").forEach((btn) => {
@@ -143,16 +130,12 @@
 
   // Init
   ensureThemeControls();
-  applyFont(getFont());
+  applyFont();
   applyTheme(getTheme());
   applyI18n(getLang());
 
   document.querySelectorAll("[data-lang-btn]").forEach((btn) => {
     btn.addEventListener("click", () => setLang(btn.getAttribute("data-lang-btn")));
-  });
-
-  document.querySelectorAll("[data-font-btn]").forEach((btn) => {
-    btn.addEventListener("click", () => setFont(btn.getAttribute("data-font-btn")));
   });
 
   document.querySelectorAll("[data-theme-btn]").forEach((btn) => {
@@ -175,5 +158,5 @@
   });
 
   // Expose for project pages if needed
-  window.PoleshUI = { setLang, setFont, setTheme, applyI18n, getLang, getFont, getTheme };
+  window.PoleshUI = { setLang, setTheme, applyI18n, getLang, getTheme };
 })();

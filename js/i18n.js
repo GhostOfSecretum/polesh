@@ -5,7 +5,6 @@
 window.POLESH_I18N = {
   ru: {
     "nav.projects": "Проекты",
-    "nav.about": "О себе",
     "nav.contact": "Контакты",
     "nav.back": "Все проекты",
     "hero.role": "Архитектор · Дизайнер интерьеров",
@@ -100,18 +99,12 @@ window.POLESH_I18N = {
     "meta.renaissance.title": "Загородный дом «Ренессанс» — Сергей Полещук",
     "meta.renaissance.description": "Загородный дом в КП «Ренессанс» — проект Сергея Полещука: тёплое дерево, камень и спокойный свет.",
     "ui.lang": "Язык",
-    "ui.font": "Шрифт",
-    "ui.font.classic": "Классика",
-    "ui.font.modern": "Модерн",
-    "ui.font.editorial": "Редакторский",
-    "ui.font.soft": "Мягкий",
     "ui.theme": "Стиль",
     "ui.theme.night": "Ночь",
     "ui.theme.stone": "Камень"
   },
   en: {
     "nav.projects": "Projects",
-    "nav.about": "About",
     "nav.contact": "Contact",
     "nav.back": "All projects",
     "hero.role": "Architect · Interior Designer",
@@ -206,11 +199,6 @@ window.POLESH_I18N = {
     "meta.renaissance.title": "Country House Renaissance — Sergey Poleshchuk",
     "meta.renaissance.description": "Country house in Renaissance community by Sergey Poleshchuk: warm timber, stone and quiet light.",
     "ui.lang": "Language",
-    "ui.font": "Typeface",
-    "ui.font.classic": "Classic",
-    "ui.font.modern": "Modern",
-    "ui.font.editorial": "Editorial",
-    "ui.font.soft": "Soft",
     "ui.theme": "Style",
     "ui.theme.night": "Night",
     "ui.theme.stone": "Stone"
@@ -227,23 +215,5 @@ window.POLESH_FONTS = {
     display: '"Cormorant Garamond", Georgia, serif',
     body: '"Manrope", system-ui, sans-serif',
     href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600&display=swap"
-  },
-  modern: {
-    id: "modern",
-    display: '"Fraunces", Georgia, serif',
-    body: '"Figtree", system-ui, sans-serif',
-    href: "https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap"
-  },
-  editorial: {
-    id: "editorial",
-    display: '"Libre Baskerville", Georgia, serif',
-    body: '"Source Sans 3", system-ui, sans-serif',
-    href: "https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap"
-  },
-  soft: {
-    id: "soft",
-    display: '"EB Garamond", Georgia, serif',
-    body: '"Nunito Sans", system-ui, sans-serif',
-    href: "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Nunito+Sans:wght@400;500;600&display=swap"
   }
 };

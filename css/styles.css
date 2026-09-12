@@ -296,14 +296,6 @@ html[data-theme="park"] .logo__img--paper {
   color: var(--paper);
 }
 
-.control-group--fonts button {
-  min-width: auto;
-  padding: 0.35rem 0.6rem;
-  letter-spacing: 0.04em;
-  text-transform: none;
-  font-size: 0.7rem;
-}
-
 .control-group--themes button {
   min-width: auto;
   display: inline-flex;
@@ -1343,11 +1335,6 @@ html[data-theme="park"] .hero__copy {
 
   .controls {
     flex-wrap: wrap;
-  }
-
-  .control-group--fonts button {
-    padding: 0.3rem 0.45rem;
-    font-size: 0.65rem;
   }
 
   .control-group--themes button {

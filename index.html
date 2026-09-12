@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="stone">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -52,9 +52,9 @@
     try {
       var allowed = ["night", "stone"];
       var t = localStorage.getItem("polesh-theme");
-      document.documentElement.dataset.theme = allowed.indexOf(t) >= 0 ? t : "night";
+      document.documentElement.dataset.theme = allowed.indexOf(t) >= 0 ? t : "stone";
     } catch (e) {
-      document.documentElement.dataset.theme = "night";
+      document.documentElement.dataset.theme = "stone";
     }
   </script>
 </head>
@@ -68,7 +68,6 @@
     <div class="header__right">
       <nav class="nav" aria-label="Primary">
         <a href="#projects" data-i18n="nav.projects">Проекты</a>
-        <a href="#about" data-i18n="nav.about">О себе</a>
         <a href="#contact" data-i18n="nav.contact">Контакты</a>
       </nav>
 
@@ -77,21 +76,14 @@
           <button type="button" data-lang-btn="ru" class="is-active">RU</button>
           <button type="button" data-lang-btn="en">EN</button>
         </div>
-        <div class="control-group control-group--fonts" role="group" aria-label="Typeface">
-          <!-- Free fonts: SIL OFL / Apache 2.0 (Google Fonts) -->
-          <button type="button" data-font-btn="classic" class="is-active" data-i18n="ui.font.classic">Классика</button>
-          <button type="button" data-font-btn="modern" data-i18n="ui.font.modern">Модерн</button>
-          <button type="button" data-font-btn="editorial" data-i18n="ui.font.editorial">Редакторский</button>
-          <button type="button" data-font-btn="soft" data-i18n="ui.font.soft">Мягкий</button>
-        </div>
         <div class="control-group control-group--themes" role="group" data-i18n-aria="ui.theme" aria-label="Стиль">
-          <button type="button" data-theme-btn="night" class="is-active">
-            <span class="theme-swatch" style="--sw:#d4b483"></span>
-            <span class="theme-label" data-i18n="ui.theme.night">Ночь</span>
-          </button>
-          <button type="button" data-theme-btn="stone">
+          <button type="button" data-theme-btn="stone" class="is-active">
             <span class="theme-swatch" style="--sw:#3f6f64"></span>
             <span class="theme-label" data-i18n="ui.theme.stone">Камень</span>
+          </button>
+          <button type="button" data-theme-btn="night">
+            <span class="theme-swatch" style="--sw:#d4b483"></span>
+            <span class="theme-label" data-i18n="ui.theme.night">Ночь</span>
           </button>
         </div>
       </div>
