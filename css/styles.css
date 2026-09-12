@@ -444,7 +444,9 @@ html[data-theme="park"] .hero__copy {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, color-mix(in srgb, var(--bg) 18%, transparent), transparent 30%);
+  background:
+    linear-gradient(to top, var(--bg), transparent 40%),
+    linear-gradient(90deg, color-mix(in srgb, var(--bg) 18%, transparent), transparent 30%);
   pointer-events: none;
 }
 
