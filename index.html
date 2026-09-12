@@ -247,73 +247,9 @@
         Работаю на стыке архитектуры и интерьера: от планировочной логики до тактильного финиша.
       </p>
     </section>
-
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div class="contact__inner">
-        <div class="contact__intro">
-          <p class="contact__label" data-i18n="contact.label">Обратная связь</p>
-          <h2 class="contact__title" id="contact-title" data-i18n="contact.title">Обсудить проект</h2>
-          <p class="contact__text" data-i18n="contact.text">
-            Оставьте заявку — отвечу на почту и предложу следующий шаг.
-          </p>
-        </div>
-
-        <form
-          class="contact-form"
-          action="https://formsubmit.co/polesh.pro@yandex.ru"
-          method="POST"
-          data-contact-form
-          novalidate
-        >
-          <input type="hidden" name="_subject" value="Заявка с polesh.pro" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="" data-contact-next />
-          <input type="text" name="_honey" class="contact-form__honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
-
-          <div class="contact-form__row">
-            <label class="contact-form__field">
-              <span data-i18n="contact.name">Имя</span>
-              <input type="text" name="name" required autocomplete="name" data-i18n-placeholder="contact.name.ph" placeholder="Как к вам обращаться" />
-            </label>
-            <label class="contact-form__field">
-              <span data-i18n="contact.email">Email</span>
-              <input type="email" name="email" required autocomplete="email" data-i18n-placeholder="contact.email.ph" placeholder="you@email.com" />
-            </label>
-          </div>
-
-          <label class="contact-form__field">
-            <span data-i18n="contact.phone">Телефон</span>
-            <span class="contact-form__phone">
-              <span class="contact-form__phone-prefix" aria-hidden="true">+7</span>
-              <input
-                type="tel"
-                name="phone"
-                inputmode="numeric"
-                autocomplete="tel-national"
-                data-phone-local
-                data-i18n-placeholder="contact.phone.ph"
-                placeholder="900 000-00-00"
-                maxlength="15"
-              />
-            </span>
-          </label>
-
-          <label class="contact-form__field">
-            <span data-i18n="contact.message">Сообщение</span>
-            <textarea name="message" rows="4" required data-i18n-placeholder="contact.message.ph" placeholder="Кратко о задаче, городе и сроках"></textarea>
-          </label>
-
-          <div class="contact-form__actions">
-            <button type="submit" class="contact-form__submit" data-i18n="contact.submit">Отправить заявку</button>
-            <p class="contact-form__status" data-contact-status role="status" aria-live="polite" hidden></p>
-          </div>
-        </form>
-      </div>
-    </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" id="contact">
     <div class="footer__grid">
       <div>
         <span class="logo">
@@ -339,7 +275,6 @@
   <script src="js/i18n.js"></script>
   <script src="js/shared.js"></script>
   <script src="js/scroll-cue.js"></script>
-  <script src="js/contact-form.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
