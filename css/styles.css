@@ -23,7 +23,7 @@
   --on-dark-line: rgba(243, 239, 232, 0.12);
   --on-dark-accent: #c9a77a;
   --grain: 0.035;
-  --portrait-pos: center 20%;
+  --portrait-pos: center 18%;
 
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "Manrope", system-ui, sans-serif;
@@ -447,64 +447,12 @@ html[data-theme="park"] .hero__copy {
   animation: hero-in 1.4s var(--ease) both;
 }
 
-.hero__media img.is-swapping {
-  animation: none;
-  opacity: 0;
-  transform: scale(1.08);
-}
-
 .hero__media::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(90deg, color-mix(in srgb, var(--bg) 18%, transparent), transparent 30%);
   pointer-events: none;
-}
-
-.portrait-picker {
-  position: absolute;
-  left: 1rem;
-  bottom: 1rem;
-  z-index: 4;
-  display: flex;
-  gap: 0.45rem;
-  padding: 0.4rem;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--paper) 78%, transparent);
-  border: 1px solid var(--line);
-  backdrop-filter: blur(12px) saturate(1.1);
-  -webkit-backdrop-filter: blur(12px) saturate(1.1);
-}
-
-.portrait-picker button {
-  width: 2.65rem;
-  height: 2.65rem;
-  padding: 0;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid transparent;
-  opacity: 0.72;
-  transition: opacity 0.25s var(--ease-soft), border-color 0.25s var(--ease-soft), transform 0.25s var(--ease);
-}
-
-.portrait-picker button img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 18%;
-  transform: none;
-  animation: none;
-}
-
-.portrait-picker button:hover {
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-.portrait-picker button.is-active {
-  opacity: 1;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 1px var(--accent);
 }
 
 @keyframes hero-in {
@@ -1404,18 +1352,6 @@ html[data-theme="park"] .hero__copy {
 
   .control-group--themes button {
     padding: 0.3rem 0.4rem;
-  }
-
-  .portrait-picker {
-    left: 0.75rem;
-    bottom: 0.75rem;
-    padding: 0.3rem;
-    gap: 0.32rem;
-  }
-
-  .portrait-picker button {
-    width: 2.15rem;
-    height: 2.15rem;
   }
 
   .hero {

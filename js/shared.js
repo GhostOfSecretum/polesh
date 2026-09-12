@@ -5,7 +5,7 @@
   const LANG_KEY = "polesh-lang";
   const FONT_KEY = "polesh-font";
   const THEME_KEY = "polesh-theme";
-  const THEMES = ["garden", "night", "park", "stone"];
+  const THEMES = ["night", "stone"];
 
   function getLang() {
     return localStorage.getItem(LANG_KEY) || "ru";
@@ -22,17 +22,9 @@
 
   const THEME_MARKUP = `
     <div class="control-group control-group--themes" role="group" data-i18n-aria="ui.theme" aria-label="Стиль">
-      <button type="button" data-theme-btn="garden">
-        <span class="theme-swatch" style="--sw:#1d4ed8"></span>
-        <span class="theme-label" data-i18n="ui.theme.garden">Сад</span>
-      </button>
       <button type="button" data-theme-btn="night">
         <span class="theme-swatch" style="--sw:#d4b483"></span>
         <span class="theme-label" data-i18n="ui.theme.night">Ночь</span>
-      </button>
-      <button type="button" data-theme-btn="park">
-        <span class="theme-swatch theme-swatch--split" style="--sw:#3b6fff;--sw2:#6faf4a"></span>
-        <span class="theme-label" data-i18n="ui.theme.park">Парк</span>
       </button>
       <button type="button" data-theme-btn="stone">
         <span class="theme-swatch" style="--sw:#3f6f64"></span>

@@ -106,11 +106,8 @@ window.POLESH_I18N = {
     "ui.font.editorial": "Редакторский",
     "ui.font.soft": "Мягкий",
     "ui.theme": "Стиль",
-    "ui.theme.garden": "Сад",
     "ui.theme.night": "Ночь",
-    "ui.theme.park": "Парк",
-    "ui.theme.stone": "Камень",
-    "ui.portrait.aria": "Портрет на главной"
+    "ui.theme.stone": "Камень"
   },
   en: {
     "nav.projects": "Projects",
@@ -215,11 +212,8 @@ window.POLESH_I18N = {
     "ui.font.editorial": "Editorial",
     "ui.font.soft": "Soft",
     "ui.theme": "Style",
-    "ui.theme.garden": "Garden",
     "ui.theme.night": "Night",
-    "ui.theme.park": "Park",
-    "ui.theme.stone": "Stone",
-    "ui.portrait.aria": "Hero portrait"
+    "ui.theme.stone": "Stone"
   }
 };
 

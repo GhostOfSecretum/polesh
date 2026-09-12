@@ -14,7 +14,7 @@
   <meta property="og:title" data-i18n-content="meta.home.title" content="Сергей Полещук — архитектор и дизайнер интерьеров" />
   <meta property="og:description" data-i18n-content="meta.home.description" content="Сергей Полещук (Sergey Poleshchuk) — архитектор и дизайнер интерьеров. Портфолио гостиничных пространств и частных интерьеров: лобби, номера, особняки. polesh.pro." />
   <meta property="og:url" content="https://polesh.pro/" />
-  <meta property="og:image" content="https://polesh.pro/images/portrait-lobby-no-watch.png" />
+  <meta property="og:image" content="https://polesh.pro/images/portrait-garden-01.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" data-i18n-content="meta.home.title" content="Сергей Полещук — архитектор и дизайнер интерьеров" />
   <meta name="twitter:description" data-i18n-content="meta.home.description" content="Сергей Полещук (Sergey Poleshchuk) — архитектор и дизайнер интерьеров. Портфолио гостиничных пространств и частных интерьеров: лобби, номера, особняки. polesh.pro." />
@@ -38,7 +38,7 @@
         "jobTitle": "Архитектор и дизайнер интерьеров",
         "description": "Архитектор и дизайнер интерьеров. Гостиничные пространства и частные интерьеры.",
         "url": "https://polesh.pro/",
-        "image": "https://polesh.pro/images/portrait-lobby-no-watch.png",
+        "image": "https://polesh.pro/images/portrait-garden-01.png",
         "email": "mailto:polesh.pro@yandex.ru",
         "knowsAbout": ["архитектура", "дизайн интерьеров", "гостиничные интерьеры", "частные резиденции"]
       }
@@ -50,7 +50,7 @@
   <link rel="stylesheet" href="css/styles.css" />
   <script>
     try {
-      var allowed = ["garden", "night", "park", "stone"];
+      var allowed = ["night", "stone"];
       var t = localStorage.getItem("polesh-theme");
       document.documentElement.dataset.theme = allowed.indexOf(t) >= 0 ? t : "night";
     } catch (e) {
@@ -85,17 +85,9 @@
           <button type="button" data-font-btn="soft" data-i18n="ui.font.soft">Мягкий</button>
         </div>
         <div class="control-group control-group--themes" role="group" data-i18n-aria="ui.theme" aria-label="Стиль">
-          <button type="button" data-theme-btn="garden">
-            <span class="theme-swatch" style="--sw:#1d4ed8"></span>
-            <span class="theme-label" data-i18n="ui.theme.garden">Сад</span>
-          </button>
           <button type="button" data-theme-btn="night" class="is-active">
             <span class="theme-swatch" style="--sw:#d4b483"></span>
             <span class="theme-label" data-i18n="ui.theme.night">Ночь</span>
-          </button>
-          <button type="button" data-theme-btn="park">
-            <span class="theme-swatch theme-swatch--split" style="--sw:#3b6fff;--sw2:#6faf4a"></span>
-            <span class="theme-label" data-i18n="ui.theme.park">Парк</span>
           </button>
           <button type="button" data-theme-btn="stone">
             <span class="theme-swatch" style="--sw:#3f6f64"></span>
@@ -119,28 +111,13 @@
       </div>
       <div class="hero__media">
         <img
-          src="images/portrait-lobby-no-watch.png"
+          src="images/portrait-garden-01.png"
           alt="Сергей Полещук — архитектор и дизайнер интерьеров"
           data-i18n-alt="hero.portrait.alt"
           width="1024"
           height="1536"
           fetchpriority="high"
-          data-hero-portrait
         />
-        <div class="portrait-picker" role="group" data-i18n-aria="ui.portrait.aria" aria-label="Портрет">
-          <button type="button" data-portrait-btn="lobby" class="is-active" aria-pressed="true">
-            <img src="images/portrait-lobby-no-watch.png" alt="" />
-          </button>
-          <button type="button" data-portrait-btn="garden-1" aria-pressed="false">
-            <img src="images/portrait-garden-01.png" alt="" />
-          </button>
-          <button type="button" data-portrait-btn="garden-2" aria-pressed="false">
-            <img src="images/portrait-garden-02.png" alt="" />
-          </button>
-          <button type="button" data-portrait-btn="garden-3" aria-pressed="false">
-            <img src="images/portrait-garden-03.png" alt="" />
-          </button>
-        </div>
       </div>
       <button
         type="button"
