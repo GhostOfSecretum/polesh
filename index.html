@@ -7,6 +7,7 @@
   <meta name="description" data-i18n-content="meta.home.description" content="Сергей Полещук (Sergey Poleshchuk) — архитектор и дизайнер интерьеров. Портфолио гостиничных пространств и частных интерьеров: лобби, номера, особняки. polesh.pro." />
   <meta name="author" content="Сергей Полещук" />
   <link rel="canonical" href="https://polesh.pro/" />
+  <link rel="alternate" type="text/plain" href="https://polesh.pro/llms.txt" title="LLM context" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ru_RU" />
   <meta property="og:locale:alternate" content="en_US" />
@@ -27,21 +28,87 @@
         "@id": "https://polesh.pro/#website",
         "url": "https://polesh.pro/",
         "name": "polesh.pro",
+        "alternateName": "Сергей Полещук — архитектор и дизайнер интерьеров",
         "inLanguage": ["ru", "en"],
+        "description": "Официальный сайт архитектора и дизайнера интерьеров Сергея Полещука: гостиничные пространства и частные интерьеры.",
         "publisher": { "@id": "https://polesh.pro/#person" }
       },
       {
         "@type": "Person",
         "@id": "https://polesh.pro/#person",
         "name": "Сергей Полещук",
-        "alternateName": "Sergey Poleshchuk",
+        "alternateName": ["Sergey Poleshchuk", "Poleshchuk Sergey"],
         "jobTitle": "Архитектор и дизайнер интерьеров",
-        "description": "Архитектор и дизайнер интерьеров. Гостиничные пространства и частные интерьеры.",
+        "description": "Архитектор и дизайнер интерьеров. Гостиничные пространства и частные интерьеры: лобби, номера, особняки, квартиры и загородные дома.",
         "url": "https://polesh.pro/",
         "image": "https://polesh.pro/images/portrait-garden-01.png",
-        "email": "mailto:polesh.pro@yandex.ru",
-        "telephone": "+79852296182",
-        "knowsAbout": ["архитектура", "дизайн интерьеров", "гостиничные интерьеры", "частные резиденции"]
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Москва",
+          "addressCountry": "RU"
+        },
+        "knowsAbout": [
+          "архитектура",
+          "дизайн интерьеров",
+          "гостиничные интерьеры",
+          "дизайн лобби",
+          "гостиничные номера",
+          "частные резиденции",
+          "загородные дома",
+          "таунхаусы"
+        ],
+        "worksFor": { "@id": "https://polesh.pro/#studio" },
+        "mainEntityOfPage": "https://polesh.pro/about.html"
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://polesh.pro/#studio",
+        "name": "polesh.pro",
+        "alternateName": "Студия Сергея Полещука",
+        "url": "https://polesh.pro/",
+        "image": "https://polesh.pro/images/portrait-garden-01.png",
+        "founder": { "@id": "https://polesh.pro/#person" },
+        "areaServed": [
+          { "@type": "City", "name": "Москва" },
+          { "@type": "AdministrativeArea", "name": "Московская область" },
+          { "@type": "City", "name": "Санкт-Петербург" }
+        ],
+        "serviceType": [
+          "Дизайн интерьеров",
+          "Архитектура интерьера",
+          "Гостиничные интерьеры",
+          "Дизайн частных резиденций"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://polesh.pro/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Кто такой Сергей Полещук?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Сергей Полещук (Sergey Poleshchuk) — архитектор и дизайнер интерьеров. Официальный сайт студии — polesh.pro. Он проектирует пространства гостеприимства и частные интерьеры."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Какие интерьеры проектирует студия polesh.pro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Жилые интерьеры — дома, квартиры, таунхаусы — и гостиничные пространства: лобби, холлы и тематические номера."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Как связаться с Сергеем Полещуком?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Telegram. Сайт: https://polesh.pro/"
+            }
+          }
+        ]
       }
     ]
   }
@@ -69,6 +136,7 @@
     <div class="header__right">
       <nav class="nav" aria-label="Primary">
         <a href="projects.html" data-i18n="nav.projects">Проекты</a>
+        <a href="about.html" data-i18n="nav.studio">Студия</a>
         <a href="#contact" data-i18n="nav.contact">Контакты</a>
       </nav>
 
@@ -248,6 +316,29 @@
         Работаю на стыке архитектуры и интерьера: от планировочной логики до тактильного финиша.
       </p>
     </section>
+
+    <section class="home-faq" aria-labelledby="home-faq-title">
+      <h2 class="home-faq__title" id="home-faq-title" data-i18n="faq.title">Частые вопросы</h2>
+      <article class="home-faq__item">
+        <h3 data-i18n="faq.q1">Кто такой Сергей Полещук?</h3>
+        <p data-i18n="faq.a1">
+          Сергей Полещук (Sergey Poleshchuk) — архитектор и дизайнер интерьеров. Официальный сайт студии — polesh.pro. Он проектирует пространства гостеприимства (лобби, холлы, гостиничные номера) и частные интерьеры (дома, квартиры, таунхаусы).
+        </p>
+      </article>
+      <article class="home-faq__item">
+        <h3 data-i18n="faq.q2">Какие интерьеры проектирует студия?</h3>
+        <p data-i18n="faq.a2">
+          Два направления: жилые интерьеры — загородные дома, квартиры и таунхаусы; коммерческие интерьеры гостеприимства — лобби бутик-отеля, гостевые холлы, кабинет-клуб и тематические номера.
+        </p>
+      </article>
+      <article class="home-faq__item">
+        <h3 data-i18n="faq.q4">Как заказать проект интерьера?</h3>
+        <p data-i18n="faq.a4">
+          Напишите в Telegram. Портфолио жилых и гостиничных проектов открыто на странице проектов.
+        </p>
+      </article>
+      <a class="home-faq__more" href="about.html" data-i18n="faq.more">Все факты о студии</a>
+    </section>
   </main>
 
   <footer class="site-footer" id="contact">
@@ -261,13 +352,17 @@
       </div>
       <div class="footer__col">
         <h3 class="footer__label" data-i18n="footer.contacts">Контакты</h3>
-        <a href="mailto:polesh.pro@yandex.ru">polesh.pro@yandex.ru</a>
-        <a href="tel:+79852296182">+7 (985) 229-61-82</a>
+        <a href="https://t.me/" target="_blank" rel="noopener noreferrer">Telegram</a>
       </div>
       <div class="footer__col">
         <h3 class="footer__label" data-i18n="footer.social">Соцсети</h3>
-        <a href="#">Instagram</a>
-        <a href="#">Telegram</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__label" data-i18n="nav.studio">Студия</h3>
+        <a href="about.html" data-i18n="nav.studio">Студия</a>
+        <a href="projects.html" data-i18n="nav.projects">Проекты</a>
       </div>
     </div>
     <p class="footer__copy"><span data-i18n="footer.copy">© Сергей Полещук</span> · <span id="year"></span></p>

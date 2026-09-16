@@ -4,15 +4,24 @@ Options -Indexes
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  RewriteCond %{HTTPS} !=on
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
   RewriteCond %{HTTP_HOST} ^www\.polesh\.pro$ [NC]
   RewriteRule ^ https://polesh.pro%{REQUEST_URI} [L,R=301]
 </IfModule>
 
+<IfModule mod_mime.c>
+  AddType text/plain;charset=UTF-8 .txt
+  AddCharset UTF-8 .txt
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "^(llms|llms-full)\.txt$">
+    Header set Content-Type "text/plain; charset=utf-8"
+    Header set X-Robots-Tag "all"
+  </FilesMatch>
+</IfModule>
+
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json image/svg+xml
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml text/markdown application/javascript application/json image/svg+xml
 </IfModule>
 
 <IfModule mod_expires.c>

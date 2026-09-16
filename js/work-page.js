@@ -117,6 +117,28 @@
     const desc = document.querySelector('meta[name="description"]');
     if (desc) desc.setAttribute("content", card);
 
+    if (!document.querySelector('script[type="application/ld+json"]')) {
+      const ld = document.createElement("script");
+      ld.type = "application/ld+json";
+      ld.setAttribute("data-work-ld", "1");
+      ld.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "@id": `https://polesh.pro/${work.page}#work`,
+        name: title,
+        alternateName: field(work, "title") === work.title_ru ? work.title_en : work.title_ru,
+        description: card,
+        url: `https://polesh.pro/${work.page}`,
+        image: `https://polesh.pro/${work.cover}`,
+        inLanguage: ["ru", "en"],
+        genre: field(work, "tag"),
+        creator: { "@id": "https://polesh.pro/#person" },
+        author: { "@id": "https://polesh.pro/#person" },
+        isPartOf: { "@id": "https://polesh.pro/#website" }
+      });
+      document.head.appendChild(ld);
+    }
+
     const hero = document.querySelector("[data-work-hero]");
     if (hero) {
       hero.innerHTML = `<img src="${src(work.cover)}" alt="${title}" />`;

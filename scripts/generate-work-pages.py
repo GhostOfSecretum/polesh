@@ -79,7 +79,12 @@ TEMPLATE = """<!DOCTYPE html>
       </div>
       <div class="footer__col">
         <h3 class="footer__label" data-i18n="footer.contacts">Контакты</h3>
-        <a href="mailto:polesh.pro@yandex.ru">polesh.pro@yandex.ru</a>
+        <a href="https://t.me/" target="_blank" rel="noopener noreferrer">Telegram</a>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__label" data-i18n="footer.social">Соцсети</h3>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
       </div>
     </div>
     <p class="footer__copy"><span data-i18n="footer.copy">© Сергей Полещук</span> · <span data-year></span></p>

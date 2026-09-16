@@ -103,7 +103,13 @@
     "model": "kling3_0",
     "usage": "Single fixed full-viewport video; scrub currentTime by page scroll progress 0→1",
     "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_125422_04e8e8d4-0528-41fb-bf45-9e64bddce03f.mp4",
-    "job_id": "04e8e8d4-0528-41fb-bf45-9e64bddce03f"
+    "job_id": "04e8e8d4-0528-41fb-bf45-9e64bddce03f",
+    "upscale": {
+      "method": "realesr-animevideov3",
+      "scale": 2,
+      "resolution": "1816x2024",
+      "note": "Local Real-ESRGAN ncnn upscale, no Higgsfield credits"
+    }
   },
   "fullpage_artdeco": {
     "file": "fullpage-scroll-artdeco.mp4",
