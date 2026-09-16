@@ -35,7 +35,7 @@
   z-index: 1;
   background:
     radial-gradient(ellipse at 70% 30%, rgba(201, 184, 160, 0.18), transparent 55%),
-    linear-gradient(105deg, rgba(244, 240, 232, 0.08), transparent 50%);
+    linear-gradient(255deg, rgba(244, 240, 232, 0.08), transparent 50%);
   pointer-events: none;
   will-change: transform;
 }

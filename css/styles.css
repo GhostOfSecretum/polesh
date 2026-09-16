@@ -339,7 +339,7 @@ html[data-theme="park"] .logo__img--paper {
 
 .hero {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: 0.95fr 1.05fr;
   height: calc(100svh - var(--header-h));
   min-height: calc(100svh - var(--header-h));
   max-height: calc(100svh - var(--header-h));
@@ -429,6 +429,7 @@ html[data-theme="park"] .hero__copy {
   background: var(--bg-deep);
   min-height: 0;
   height: 100%;
+  order: -1;
 }
 
 .hero__media img {
@@ -446,7 +447,7 @@ html[data-theme="park"] .hero__copy {
   inset: 0;
   background:
     linear-gradient(to top, var(--bg), transparent 40%),
-    linear-gradient(90deg, color-mix(in srgb, var(--bg) 18%, transparent), transparent 30%);
+    linear-gradient(to left, color-mix(in srgb, var(--bg) 18%, transparent), transparent 30%);
   pointer-events: none;
 }
 
