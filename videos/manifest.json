@@ -66,7 +66,13 @@
     "model": "kling3_0",
     "usage": "Single fixed full-viewport video; scrub currentTime by page scroll progress 0→1",
     "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_073721_cfc80bf6-c471-411b-8571-2ca0d025463c.mp4",
-    "job_id": "cfc80bf6-c471-411b-8571-2ca0d025463c"
+    "job_id": "cfc80bf6-c471-411b-8571-2ca0d025463c",
+    "upscale": {
+      "method": "realesr-animevideov3",
+      "scale": 2,
+      "resolution": "1808x2032",
+      "note": "Local Real-ESRGAN ncnn upscale, no Higgsfield credits"
+    }
   },
   "fullpage_spaceage": {
     "file": "fullpage-scroll-spaceage.mp4",
@@ -76,7 +82,13 @@
     "usage": "Single fixed full-viewport video; scrub currentTime by page scroll progress 0→1",
     "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_122442_58108c74-c820-439c-967e-06f8601f6634.mp4",
     "job_id": "58108c74-c820-439c-967e-06f8601f6634",
-    "note": "CDN download was slow from this environment; open URL to save locally"
+    "note": "CDN download was slow from this environment; open URL to save locally",
+    "upscale": {
+      "method": "realesr-animevideov3",
+      "scale": 2,
+      "resolution": "1736x2112",
+      "note": "Local Real-ESRGAN ncnn upscale, no Higgsfield credits"
+    }
   },
   "fullpage_biophilic": {
     "file": "fullpage-scroll-biophilic.mp4",
@@ -85,7 +97,13 @@
     "model": "kling3_0",
     "usage": "Single fixed full-viewport video; scrub currentTime by page scroll progress 0→1",
     "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_124431_c38415c7-81dc-4d63-9db6-090f1320eb40.mp4",
-    "job_id": "c38415c7-81dc-4d63-9db6-090f1320eb40"
+    "job_id": "c38415c7-81dc-4d63-9db6-090f1320eb40",
+    "upscale": {
+      "method": "realesr-animevideov3",
+      "scale": 2,
+      "resolution": "2032x1808",
+      "note": "Local Real-ESRGAN ncnn upscale, no Higgsfield credits"
+    }
   },
   "fullpage_eco": {
     "file": "fullpage-scroll-eco.mp4",
@@ -94,7 +112,13 @@
     "model": "kling3_0",
     "usage": "Autoplay muted loop on eco project page",
     "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260720_191621_a5b468be-3db8-4789-b3ad-a477763918d6.mp4",
-    "job_id": "a5b468be-3db8-4789-b3ad-a477763918d6"
+    "job_id": "a5b468be-3db8-4789-b3ad-a477763918d6",
+    "upscale": {
+      "method": "realesr-animevideov3",
+      "scale": 2,
+      "resolution": "2032x1808",
+      "note": "Local Real-ESRGAN ncnn upscale, no Higgsfield credits"
+    }
   },
   "fullpage_lobby": {
     "file": "fullpage-scroll-lobby.mp4",
@@ -118,7 +142,13 @@
     "model": "kling3_0",
     "usage": "Autoplay muted loop on artdeco project page",
     "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260721_151513_a4062380-aaac-44e8-a506-25b1427f0511.mp4",
-    "job_id": "a4062380-aaac-44e8-a506-25b1427f0511"
+    "job_id": "a4062380-aaac-44e8-a506-25b1427f0511",
+    "upscale": {
+      "method": "realesr-animevideov3",
+      "scale": 2,
+      "resolution": "2176x1688",
+      "note": "Local Real-ESRGAN ncnn upscale, no Higgsfield credits"
+    }
   },
   "fullpage_renaissance": {
     "file": "fullpage-scroll-renaissance.mp4",
@@ -128,6 +158,12 @@
     "usage": "Autoplay muted loop on renaissance project page",
     "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Ge7LMqhLNulSxt4F5632ymC0FK/hf_20260721_152815_6697212e-5e1d-49ba-b8a7-388e3751c0fe.mp4",
     "job_id": "6697212e-5e1d-49ba-b8a7-388e3751c0fe",
-    "note": "Regenerated for realism: living-room-only frames, anti-morph prompt"
+    "note": "Regenerated for realism: living-room-only frames, anti-morph prompt",
+    "upscale": {
+      "method": "realesr-animevideov3",
+      "scale": 2,
+      "resolution": "2176x1688",
+      "note": "Local Real-ESRGAN ncnn upscale, no Higgsfield credits"
+    }
   }
 }
