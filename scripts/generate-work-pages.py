@@ -105,7 +105,7 @@ TEMPLATE = """<!DOCTYPE html>
 
   <script src="../js/i18n.js?v=20261128e"></script>
   <script src="../js/works.js?v=20261128f"></script>
-  <script src="../js/shared.js?v=20261128e"></script>
+  <script src="../js/shared.js?v=20261128k"></script>
   <script src="../js/work-page.js?v=20260916"></script>
 </body>
 </html>

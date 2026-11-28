@@ -195,7 +195,7 @@
       btn.type = "button";
       btn.className = "live__clip";
       btn.setAttribute("data-live-clip", String(index));
-      btn.innerHTML = `<img src="${prefix}${clip.poster}" alt="" /><span class="live__clip-name"></span>`;
+      btn.innerHTML = `<img src="${prefix}${clip.poster}?v=20261128k" alt="" /><span class="live__clip-name"></span>`;
       btn.addEventListener("click", () => playClip(index, true));
       strip.appendChild(btn);
     });
