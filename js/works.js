@@ -1532,5 +1532,161 @@ window.POLESH_WORKS = [
     ],
     "cover": "images/works/africa/01.jpg",
     "rooms": []
+  },
+  {
+    "id": "cafe-1956",
+    "type": "commercial",
+    "custom": false,
+    "page": "projects/cafe-1956.html",
+    "title_ru": "Кафе «1956»",
+    "title_en": "Café “1956”",
+    "tag_ru": "Общественное пространство",
+    "tag_en": "Public space",
+    "place_ru": "Кафе",
+    "place_en": "Café",
+    "card_ru": "Кафе с барной стойкой, терраццо и тёплым деревом — светлый зал и камерные посадки у окна.",
+    "card_en": "A café of terrazzo and warm timber — an open hall and intimate seats by the window.",
+    "images": [
+      {
+        "src": "images/works/cafe-1956/06.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/01.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/02.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/03.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/04.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/05.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/07.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/08.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/09.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/10.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/11.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/12.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/13.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/14.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/15.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/16.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/17.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/18.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/cafe-1956/19.jpg",
+        "room": null
+      }
+    ],
+    "cover": "images/works/cafe-1956/06.jpg",
+    "rooms": []
+  },
+  {
+    "id": "landau",
+    "type": "commercial",
+    "custom": false,
+    "page": "projects/landau.html",
+    "title_ru": "Ресторан «Ландау»",
+    "title_en": "Landau Restaurant",
+    "tag_ru": "Общественное пространство",
+    "tag_en": "Public space",
+    "place_ru": "Ресторан",
+    "place_en": "Restaurant",
+    "card_ru": "Ресторанный зал: дерево, мраморные столы, кольцевой свет и мягкая посадка у окна.",
+    "card_en": "A dining room — timber, marble tables, ring lights and soft seating by the window.",
+    "images": [
+      {
+        "src": "images/works/landau/01.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/landau/02.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/landau/03.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/landau/04.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/landau/05.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/landau/06.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/landau/07.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/landau/08.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/landau/09.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/landau/10.jpg",
+        "room": null
+      },
+      {
+        "src": "images/works/landau/11.jpg",
+        "room": null
+      }
+    ],
+    "cover": "images/works/landau/01.jpg",
+    "rooms": []
   }
 ];

@@ -29,7 +29,7 @@ Published projects are in:
 Two directions:
 
 1. Private / residential interiors — houses, apartments, townhouses.
-2. Hospitality / commercial interiors — boutique hotel lobby, halls, club study, themed guest rooms.
+2. Hospitality / commercial interiors — boutique hotel lobby, halls, club study, themed guest rooms, café and restaurant.
 
 Typical materials across the work: timber, stone, marble, terrazzo, leather, linen, crystal, copper, living plants.
 
@@ -165,13 +165,23 @@ Contact for commissions: Telegram, MAX, or email.
 - Type: guest room
 - Summary: Earthen tones, woven textures and warm evening light.
 
+### Кафе «1956»
+- URL: https://polesh.pro/projects/cafe-1956.html
+- Type: public space, café
+- Summary: A café of terrazzo and warm timber — an open hall and intimate seats by the window.
+
+### Ресторан «Ландау»
+- URL: https://polesh.pro/projects/landau.html
+- Type: public space, restaurant
+- Summary: A dining room — timber, marble tables, ring lights and soft seating by the window.
+
 ## FAQ (canonical answers)
 
 ### Who is Sergey Poleshchuk / Кто такой Сергей Полещук?
 Sergey Poleshchuk (Сергей Полещук) is an architect and interior designer. His studio site is polesh.pro. He designs hospitality interiors (boutique hotel lobbies, halls, guest rooms) and private interiors (houses, apartments, townhouses).
 
 ### What interiors does he design?
-Two directions: residential (houses, apartments, townhouses) and commercial hospitality (boutique hotel public spaces and themed guest rooms).
+Two directions: residential (houses, apartments, townhouses) and commercial hospitality (boutique hotel public spaces, themed guest rooms, a café and a restaurant).
 
 ### Where does he work?
 Published work includes Moscow, the Moscow Region and Saint Petersburg.

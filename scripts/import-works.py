@@ -452,6 +452,34 @@ WORKS = [
         "card_ru": "Африканский номер: земляные тона, плетёные фактуры и тёплый вечерний свет.",
         "card_en": "An African room — earthen tones, woven textures and warm evening light.",
     },
+    {
+        "id": "cafe-1956",
+        "type": "commercial",
+        "source": Path("/Users/rustamahatov/Downloads/Нежилые/Кафе 1956 ☕"),
+        "custom": False,
+        "title_ru": "Кафе «1956»",
+        "title_en": "Café “1956”",
+        "tag_ru": "Общественное пространство",
+        "tag_en": "Public space",
+        "place_ru": "Кафе",
+        "place_en": "Café",
+        "card_ru": "Кафе с барной стойкой, терраццо и тёплым деревом — светлый зал и камерные посадки у окна.",
+        "card_en": "A café of terrazzo and warm timber — an open hall and intimate seats by the window.",
+    },
+    {
+        "id": "landau",
+        "type": "commercial",
+        "source": Path("/Users/rustamahatov/Downloads/Нежилые/Ресторан Ландау 🏛️"),
+        "custom": False,
+        "title_ru": "Ресторан «Ландау»",
+        "title_en": "Landau Restaurant",
+        "tag_ru": "Общественное пространство",
+        "tag_en": "Public space",
+        "place_ru": "Ресторан",
+        "place_en": "Restaurant",
+        "card_ru": "Ресторанный зал: дерево, мраморные столы, кольцевой свет и мягкая посадка у окна.",
+        "card_en": "A dining room — timber, marble tables, ring lights and soft seating by the window.",
+    },
 ]
 
 
@@ -463,6 +491,12 @@ def hotel_root() -> Path:
 
 
 def resolve_source(spec: dict) -> Path | None:
+    source = spec.get("source")
+    if source:
+        path = Path(source)
+        if not path.is_dir():
+            raise SystemExit(f"Source not found for {spec['id']}: {path}")
+        return path
     match = spec.get("match")
     if not match:
         return None
