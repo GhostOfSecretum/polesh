@@ -1,0 +1,34 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upload site to hosting
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: server173.hosting.reg.ru
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          local-dir: ./
+          server-dir: ./
+          timeout: 120000
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/scripts/**
+            **/images/**
+            **/videos/**
+            portrait_background_reference.png
+            **/*.mp4
+            **/.DS_Store
