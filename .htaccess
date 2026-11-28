@@ -25,9 +25,9 @@ Options -Indexes
 </IfModule>
 
 <IfModule mod_authz_core.c>
-  <Files ".ftp-deploy-sync-state.json">
+  <FilesMatch "^\.ftp-deploy-sync-state.*\.json$">
     Require all denied
-  </Files>
+  </FilesMatch>
 </IfModule>
 
 <IfModule mod_headers.c>

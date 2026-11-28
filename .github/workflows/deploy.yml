@@ -33,22 +33,27 @@ jobs:
             **/*.mp4
             **/.DS_Store
 
-      - name: Upload missing images and videos
-        env:
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          LFTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+      - name: Stage project photos and Live films
         run: |
-          sudo apt-get update
-          sudo apt-get install -y lftp
-          lftp -u "$FTP_USERNAME" ftp://server173.hosting.reg.ru <<'EOF'
-          set cmd:fail-exit yes
-          set ftp:ssl-allow no
-          set ftp:passive-mode on
-          set net:timeout 30
-          set net:max-retries 3
-          set net:reconnect-interval-base 5
-          set mirror:parallel-transfer-count 3
-          mirror -R --only-missing --parallel=3 --verbose -X .DS_Store images images
-          mirror -R --only-missing --parallel=2 --verbose -X .DS_Store videos videos
-          bye
-          EOF
+          mkdir -p media-upload/images/works media-upload/videos
+          cp -a images/works/cafe-1956 media-upload/images/works/cafe-1956
+          cp -a images/works/landau media-upload/images/works/landau
+          cp -a images/live media-upload/images/live
+          cp -a videos/live media-upload/videos/live
+          find media-upload -name '.DS_Store' -delete
+
+      - name: Upload project photos and Live films
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: server173.hosting.reg.ru
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          local-dir: ./media-upload/
+          server-dir: ./
+          timeout: 600000
+          dangerous-clean-slate: false
+          state-name: .ftp-deploy-sync-state-media.json
+          exclude: |
+            **/.DS_Store
