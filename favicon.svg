@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-36 -122 440 440" role="img">
+  <title>polesh.pro</title>
+  <style>
+    .mark { fill: #1c1a17; }
+    @media (prefers-color-scheme: dark) {
+      .mark { fill: #f3efe8; }
+    }
+  </style>
+  <path class="mark" fill-rule="evenodd" d="M0 0H368V196H0ZM26 196V76A44 44 0 0 1 114 76V196ZM140 196V76A44 44 0 0 1 228 76V196ZM254 196V76A44 44 0 0 1 342 76V196Z"/>
+</svg>
