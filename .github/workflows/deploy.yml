@@ -32,3 +32,23 @@ jobs:
             portrait_background_reference.png
             **/*.mp4
             **/.DS_Store
+
+      - name: Upload missing images and videos
+        env:
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          LFTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
+          lftp -u "$FTP_USERNAME" ftp://server173.hosting.reg.ru <<'EOF'
+          set cmd:fail-exit yes
+          set ftp:ssl-allow no
+          set ftp:passive-mode on
+          set net:timeout 30
+          set net:max-retries 3
+          set net:reconnect-interval-base 5
+          set mirror:parallel-transfer-count 3
+          mirror -R --only-missing --parallel=3 --verbose -X .DS_Store images images
+          mirror -R --only-missing --parallel=2 --verbose -X .DS_Store videos videos
+          bye
+          EOF
