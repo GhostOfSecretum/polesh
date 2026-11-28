@@ -187,8 +187,7 @@ body::before {
    ------------------------------------------------------------ */
 
 .site-header {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 100;
   display: flex;
   align-items: center;
@@ -823,7 +822,7 @@ html[data-theme="park"] .hero__copy {
    ------------------------------------------------------------ */
 
 .site-footer {
-  scroll-margin-top: var(--header-h);
+  scroll-margin-top: 0;
   background: var(--dark);
   color: var(--on-dark);
   padding: clamp(2rem, 5vh, 3rem) clamp(1.25rem, 4vw, 3.5rem) 2rem;
@@ -1394,7 +1393,7 @@ html[data-theme="park"] .hero__copy {
 
 .folio-chapter {
   padding-bottom: clamp(2rem, 6vh, 4rem);
-  scroll-margin-top: calc(var(--header-h) + 0.75rem);
+  scroll-margin-top: 0.75rem;
 }
 
 .folio-chapter .section-head {
@@ -1551,7 +1550,7 @@ html[data-theme="park"] .hero__copy {
 
 .work-room {
   padding-bottom: clamp(2rem, 5vh, 3.5rem);
-  scroll-margin-top: calc(var(--header-h) + 0.75rem);
+  scroll-margin-top: 0.75rem;
 }
 
 .work-room__title {
