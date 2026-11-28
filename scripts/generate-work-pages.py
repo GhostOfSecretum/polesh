@@ -31,7 +31,7 @@ TEMPLATE = """<!DOCTYPE html>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600&display=swap" />
-  <link rel="stylesheet" href="../css/styles.css?v=20261128" />
+  <link rel="stylesheet" href="../css/styles.css?v=20261128e" />
   <script>
     try {{
       var allowed = ["night", "stone"];
@@ -100,9 +100,9 @@ TEMPLATE = """<!DOCTYPE html>
     <button type="button" class="work-lightbox__nav work-lightbox__nav--next" data-lightbox-next aria-label="Далее">›</button>
   </div>
 
-  <script src="../js/i18n.js?v=20261128"></script>
+  <script src="../js/i18n.js?v=20261128e"></script>
   <script src="../js/works.js?v=20260916"></script>
-  <script src="../js/shared.js?v=20261128d"></script>
+  <script src="../js/shared.js?v=20261128e"></script>
   <script src="../js/work-page.js?v=20260916"></script>
 </body>
 </html>

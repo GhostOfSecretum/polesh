@@ -172,7 +172,13 @@
           <button type="button" class="live__close" data-live-close data-i18n="live.close">Закрыть</button>
         </div>
         <div class="live__stage">
+          <button type="button" class="live__step live__step--prev" data-live-prev data-i18n-aria="live.prev" aria-label="Предыдущее видео">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
           <video data-live-player controls playsinline preload="none"></video>
+          <button type="button" class="live__step live__step--next" data-live-next data-i18n-aria="live.next" aria-label="Следующее видео">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
         </div>
         <div class="live__strip" data-live-strip></div>
       </div>
@@ -224,6 +230,12 @@
       });
     }
 
+    function stepClip(delta) {
+      playClip((current + delta + LIVE_CLIPS.length) % LIVE_CLIPS.length, true);
+      const active = strip.querySelector(".live__clip.is-active");
+      if (active) active.scrollIntoView({ inline: "center", block: "nearest", behavior: "smooth" });
+    }
+
     function openLive() {
       root.hidden = false;
       document.body.style.overflow = "hidden";
@@ -242,12 +254,23 @@
     }
 
     openBtn.addEventListener("click", openLive);
+    root.querySelector("[data-live-prev]").addEventListener("click", () => stepClip(-1));
+    root.querySelector("[data-live-next]").addEventListener("click", () => stepClip(1));
     root.querySelectorAll("[data-live-close]").forEach((el) => {
       el.addEventListener("click", closeLive);
     });
     document.addEventListener("keydown", (e) => {
       if (root.hidden) return;
       if (e.key === "Escape") closeLive();
+      if (e.target === player) return;
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        stepClip(-1);
+      }
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        stepClip(1);
+      }
     });
 
     labelClips();

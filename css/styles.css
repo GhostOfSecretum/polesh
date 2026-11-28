@@ -357,10 +357,41 @@ html[data-theme="park"] .logo__img--paper {
 .live__close:hover { color: #fff; }
 
 .live__stage {
+  position: relative;
   min-height: 0;
   background: #0c0b0a;
   display: grid;
   place-items: center;
+}
+
+.live__step {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(243, 239, 232, 0.28);
+  background: rgba(12, 11, 10, 0.55);
+  color: #f3efe8;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.live__step--prev { left: 0.85rem; }
+.live__step--next { right: 0.85rem; }
+
+.live__step svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.live__step:hover {
+  background: rgba(12, 11, 10, 0.86);
+  border-color: rgba(243, 239, 232, 0.55);
 }
 
 .live__stage video {
